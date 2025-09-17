@@ -8,6 +8,11 @@ import { ProjectModal } from "./project-modal";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+interface PortfolioTimelineProps {
+  projects: PortfolioItem[];
+  categories: string[];
+}
+
 export function PortfolioTimeline({ projects, categories }: PortfolioTimelineProps) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
