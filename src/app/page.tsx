@@ -11,7 +11,7 @@ export default function Home() {
               ChronoFolio
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
-              Scroll to explore a visual journey through my past projects.
+              Haz scroll para explorar mis proyectos pasados.
             </p>
           </header>
 
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="w-full max-w-7xl mx-auto text-center py-8 px-4 border-t">
-          <p className="text-muted-foreground">&copy; {new Date().getFullYear()} Coke Stuyck. Made with ❤️ in Valencia.</p>
+          <p className="text-muted-foreground">&copy; {new Date().getFullYear()} Coke Stuyck. Hecho con ❤️ en Valencia.</p>
       </footer>
     </div>
   );
