@@ -34,7 +34,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <CarouselContent>
                 {[project.mainImage, ...project.gallery].map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="aspect-video relative rounded-lg overflow-hidden border">
+                    <div className="aspect-video relative overflow-hidden border">
                       <Image
                         src={image.src}
                         alt={`${project.title} - image ${index + 1}`}

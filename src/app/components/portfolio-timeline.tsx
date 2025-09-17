@@ -188,7 +188,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
               ></div>
               
               <div className="relative cursor-pointer" onClick={() => setSelectedProject(project)}>
-                <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 group-hover:shadow-2xl">
+                <div className="relative overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
                   <Image
                     src={project.mainImage.src}
                     width={project.mainImage.width}
