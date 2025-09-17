@@ -1,3 +1,112 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "nova-main",
+      "description": "Abstract geometric shapes in blue and purple.",
+      "imageUrl": "https://picsum.photos/seed/nova1/800/600",
+      "imageHint": "abstract geometric"
+    },
+    {
+      "id": "nova-gallery-1",
+      "description": "Wireframe of a website layout.",
+      "imageUrl": "https://picsum.photos/seed/nova2/800/600",
+      "imageHint": "wireframe layout"
+    },
+    {
+      "id": "nova-gallery-2",
+      "description": "A person using a laptop.",
+      "imageUrl": "https://picsum.photos/seed/nova3/800/600",
+      "imageHint": "person laptop"
+    },
+    {
+      "id": "quantum-main",
+      "description": "Neon lines forming a network.",
+      "imageUrl": "https://picsum.photos/seed/quantum1/600/800",
+      "imageHint": "neon network"
+    },
+    {
+      "id": "quantum-gallery-1",
+      "description": "Mobile app interface on a smartphone.",
+      "imageUrl": "https://picsum.photos/seed/quantum2/800/600",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "quantum-gallery-2",
+      "description": "Flowchart of app logic.",
+      "imageUrl": "https://picsum.photos/seed/quantum3/800/600",
+      "imageHint": "flowchart logic"
+    },
+    {
+      "id": "echo-main",
+      "description": "Close-up of textured paper with a logo mock-up.",
+      "imageUrl": "https://picsum.photos/seed/echo1/800/800",
+      "imageHint": "logo mockup"
+    },
+    {
+      "id": "echo-gallery-1",
+      "description": "Collection of business cards.",
+      "imageUrl": "https://picsum.photos/seed/echo2/800/600",
+      "imageHint": "business cards"
+    },
+    {
+      "id": "echo-gallery-2",
+      "description": "A mood board with colors and images.",
+      "imageUrl": "https://picsum.photos/seed/echo3/800/600",
+      "imageHint": "mood board"
+    },
+    {
+      "id": "zenith-main",
+      "description": "Mountain peak at sunrise.",
+      "imageUrl": "https://picsum.photos/seed/zenith1/800/500",
+      "imageHint": "mountain sunrise"
+    },
+    {
+      "id": "zenith-gallery-1",
+      "description": "Minimalist website design on a desktop computer.",
+      "imageUrl": "https://picsum.photos/seed/zenith2/800/600",
+      "imageHint": "website design"
+    },
+    {
+      "id": "zenith-gallery-2",
+      "description": "Tablet showing responsive design.",
+      "imageUrl": "https://picsum.photos/seed/zenith3/800/600",
+      "imageHint": "responsive design"
+    },
+    {
+      "id": "fusion-main",
+      "description": "Colorful abstract liquid art.",
+      "imageUrl": "https://picsum.photos/seed/fusion1/600/700",
+      "imageHint": "liquid art"
+    },
+    {
+      "id": "fusion-gallery-1",
+      "description": "User testing session with multiple people.",
+      "imageUrl": "https://picsum.photos/seed/fusion2/800/600",
+      "imageHint": "user testing"
+    },
+    {
+      "id": "fusion-gallery-2",
+      "description": "Dashboard UI with charts and graphs.",
+      "imageUrl": "https://picsum.photos/seed/fusion3/800/600",
+      "imageHint": "dashboard ui"
+    },
+    {
+      "id": "aura-main",
+      "description": "Soft pastel gradient background.",
+      "imageUrl": "https://picsum.photos/seed/aura1/700/700",
+      "imageHint": "pastel gradient"
+    },
+    {
+      "id": "aura-gallery-1",
+      "description": "Product packaging design.",
+      "imageUrl": "https://picsum.photos/seed/aura2/800/600",
+      "imageHint": "packaging design"
+    },
+    {
+      "id": "aura-gallery-2",
+      "description": "A style guide document.",
+      "imageUrl": "https://picsum.photos/seed/aura3/800/600",
+      "imageHint": "style guide"
+    }
+  ]
 }
