@@ -53,9 +53,21 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <CarouselPrevious className="left-2 border-none" />
             <CarouselNext className="right-2 border-none"/>
           </Carousel>
-          <DialogDescription className="text-base leading-relaxed text-foreground/80 max-w-3xl mx-auto pb-2">
+          <DialogDescription className="text-base leading-relaxed text-foreground/80 max-w-3xl mx-auto">
             {project.description}
           </DialogDescription>
+          {project.link && (
+            <div className="text-center mt-4">
+              <a
+                href={project.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:underline"
+              >
+                {project.link.name} →
+              </a>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
