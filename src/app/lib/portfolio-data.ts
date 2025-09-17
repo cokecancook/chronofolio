@@ -27,10 +27,72 @@ export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Di
 
 export const portfolioData: PortfolioItem[] = [
   {
+    id: "kensa",
+    title: "Kensa",
+    subtitle: "Folleto",
+    categories: ["Diseño Gráfico", "Editorial"],
+    year: "2022",
+    mainImage: {
+      src: "/images/portfolio/kensa/ken-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/kensa/ken-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+    ],
+  },
+  {
+    id: "peaberry",
+    title: "Peaberry",
+    subtitle: "Branding",
+    categories: ["Logo", "Branding"],
+    year: "2022",
+    mainImage: {
+      src: "/images/portfolio/peaberry/pea-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/peaberry/pea-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/peaberry/pea-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+      {
+      src: "/images/portfolio/peaberry/pea-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+      {
+      src: "/images/portfolio/peaberry/pea-04.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+    ],
+  },
+  {
     id: "watchdrop",
     title: "Watchdrop",
-    subtitle: "Presentation",
-    categories: ["Graphic Design"],
+    subtitle: "Presentación",
+    categories: ["Diseño Gráfico"],
     year: "2021",
     mainImage: {
       src: "/images/portfolio/watchdrop/wat-00.jpg",
@@ -63,7 +125,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "maseuropa",
     subtitle: "Branding",
     categories: ["Branding"],
-    year: "2017",
+    year: "2018",
     mainImage: {
       src: "/images/portfolio/maseuropa/mas-00.jpg",
       width: 1600,
@@ -126,7 +188,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "logo on corporate laser background",
     },
-    description: "Proyecto de identidad corporativa para el centro de estética BeautyLUZ. Se desarrolló la marca y sus aplicaciones a diversas piezas, tanto gráficas (flyers) como de señalética y rotulación del local. Esto incluyó el diseño de vinilos para el escaparate, la banderola exterior y la persiana metálica.",
+    description: "",
     gallery: [
       {
       src: "/images/portfolio/tamara-falco-preysler/tfp-01.jpg",
@@ -519,8 +581,8 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
-    id: "valencia-fashion-week",
-    title: "Valencia Fashion Week",
+    id: "xv-valencia-fashion-week",
+    title: "XV Valencia Fashion Week",
     subtitle: "Branding",
     categories: ["Logo", "Branding"],
     year: "2014",
@@ -775,7 +837,7 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "hannah",
     title: "Hannah",
-    subtitle: "Logo Design",
+    subtitle: "Logo",
     categories: ["Logo"],
     year: "2012",
     mainImage: {
@@ -825,7 +887,7 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "granja-vectorial",
     title: "Granja Vectorial",
-    subtitle: "Illustration",
+    subtitle: "Ilustraciones Digitales",
     categories: ["Ilustración"],
     year: "2010",
     mainImage: {
