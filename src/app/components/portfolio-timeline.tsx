@@ -94,14 +94,21 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
               )}
               onMouseEnter={() => !isMobile && setHoveredCardId(project.id)}
             >
-              <div
-                className={cn(
-                    "absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-background border-2 border-primary hidden md:block",
-                    index % 2 === 0 ? "md:right-0 md:translate-x-1/2" : "md:left-0 md:-translate-x-1/2",
-                    isActive && "bg-primary"
-                )}
-                style={{transition: 'transform 0.1s, background-color 0.1s'}}
-              ></div>
+              <div className="absolute top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-2"
+                style={{
+                  right: index % 2 === 0 ? "0" : "auto",
+                  left: index % 2 === 0 ? "auto" : "0",
+                  transform: `translateX(${index % 2 === 0 ? "50%" : "-50%"})`
+                }}>
+                <span className="text-xs font-headline tracking-tighter whitespace-nowrap">{project.year}</span>
+                <div
+                  className={cn(
+                      "w-4 h-4 rounded-full bg-background border-2 border-primary",
+                      isActive && "bg-primary"
+                  )}
+                  style={{transition: 'transform 0.1s, background-color 0.1s'}}
+                ></div>
+              </div>
               
               <div className="relative cursor-pointer" onClick={() => setSelectedProject(project)}>
                 <div className={cn("relative overflow-hidden shadow-2xl")}>
@@ -119,7 +126,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
                       !isActive && "hidden"
                     )}
                   >
-                    <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                    <h3 className="text-2xl font-headline tracking-tighter font-bold text-white">{project.title}</h3>
                     <p className="text-lg text-gray-200">{project.subtitle}</p>
                     <p className="text-lg text-gray-200 mt-2">{project.year}</p>
                   </div>
