@@ -53,7 +53,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <CarouselPrevious className="left-2 border-none" />
             <CarouselNext className="right-2 border-none"/>
           </Carousel>
-          <DialogDescription className="text-base leading-relaxed text-foreground/80 max-w-3xl mx-auto">
+          <DialogDescription className="text-base leading-relaxed text-foreground/80 max-w-3xl">
             {project.description}
           </DialogDescription>
           {project.link && (
