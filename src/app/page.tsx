@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="w-full max-w-7xl mx-auto text-center py-8 px-4 border-t">
-          <p className="text-muted-foreground">&copy; {new Date().getFullYear()} ChronoFolio. All rights reserved.</p>
+          <p className="text-muted-foreground">&copy; {new Date().getFullYear()} Coke Stuyck. Made with ❤️ in Valencia.</p>
       </footer>
     </div>
   );
