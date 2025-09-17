@@ -14,7 +14,7 @@ interface PortfolioTimelineProps {
 }
 
 export function PortfolioTimeline({ projects, categories }: PortfolioTimelineProps) {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Todos");
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
   const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
   
@@ -23,7 +23,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "All") {
+    if (activeFilter === "Todos") {
       return projects;
     }
     return projects.filter((p) => p.categories.includes(activeFilter));
