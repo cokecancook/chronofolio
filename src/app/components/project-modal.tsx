@@ -18,7 +18,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={!!project} onOpenChange={(isOpen) => !isOpen && onClose()}>
-      <DialogContent className="sm:max-w-4xl max-h-[90svh] overflow-y-auto p-0">
+      <DialogContent className="sm:max-w-4xl max-h-[90svh] overflow-y-auto p-0 pb-3">
         <div className="p-6">
           <DialogHeader>
             <DialogTitle className="text-3xl font-bold font-headline">{project.title}</DialogTitle>
