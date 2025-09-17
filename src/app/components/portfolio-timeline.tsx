@@ -56,23 +56,25 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
   }, [filteredProjects]);
 
   return (
-    <section>
-      <div className="flex justify-center flex-wrap gap-2 mb-12">
-        {categories.map((category) => (
-          <Button
-            key={category}
-            variant={activeFilter === category ? "default" : "outline"}
-            onClick={() => setActiveFilter(category)}
-            className="rounded-full"
-          >
-            {category}
-          </Button>
-        ))}
+    <section className="min-h-screen relative">
+      <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm pt-8 pb-4">
+        <div className="flex justify-center flex-wrap gap-2 mb-8">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={activeFilter === category ? "default" : "outline"}
+              onClick={() => setActiveFilter(category)}
+              className="rounded-full"
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
       </div>
 
       <div 
         ref={timelineRef} 
-        className="relative w-full max-w-4xl mx-auto"
+        className="relative w-full max-w-4xl mx-auto mt-8"
         onMouseLeave={() => setHoveredCardId(null)}
       >
         <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
