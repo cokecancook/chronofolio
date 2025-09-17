@@ -11,6 +11,10 @@ export type PortfolioItem = {
     hint: string;
   };
   description: string;
+  link?: {
+    url: string;
+    name: string;
+  };
   gallery: {
     src: string;
     width: number;
@@ -22,6 +26,38 @@ export type PortfolioItem = {
 export const portfolioCategories = ["Todos", "Branding", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
 
 export const portfolioData: PortfolioItem[] = [
+  {
+    id: "watchdrop",
+    title: "Watchdrop",
+    subtitle: "Presentation",
+    categories: ["Graphic Design"],
+    year: "2021",
+    mainImage: {
+      src: "/images/portfolio/watchdrop/wat-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "Presentación web para la casa de subastas de relojes 'Watchdrop'.",
+    link: {
+      url: "/content/watchdrop/index.html",
+      name: "Ver presentación"
+    },
+    gallery: [
+      {
+      src: "/images/portfolio/watchdrop/wat-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/watchdrop/wat-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+    ],
+  },
   {
     id: "beauty-luz",
     title: "Beauty Luz",
@@ -383,6 +419,58 @@ export const portfolioData: PortfolioItem[] = [
         width: 1556,
         height: 992,
         hint: "negative logo close-up",
+      },
+    ],
+  },
+  {
+    id: "valencia-fashion-week",
+    title: "Valencia Fashion Week",
+    subtitle: "Branding",
+    categories: ["Logo", "Branding"],
+    year: "2014",
+    mainImage: {
+      src: "/images/portfolio/valencia-fashion-week/vfw-00.jpg",
+      width: 1333,
+      height: 1333,
+      hint: "poster mockup",
+    },
+    description: "Identidad gráfica y comunicación visual desarrollada para la XV edición de la Valencia Fashion Week, junto con NIL Comunicación, bajo el lema #descaradamentjóvenes. El concepto se materializa en una  estética vibrante, fresca y enérgica, que emplea una paleta de colores llamativa. La identidad se aplicó de forma integral a la gran variedad de soportes que un evento de esta magnitud requiere, incluyendo cartelería, programas de actividades, invitaciones, y múltiples tipos de acreditaciones (prensa, backstage), asegurando una experiencia visual coherente y llena de energía.",
+    gallery: [
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "billboard mockup",
+      },
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "stationery mockup",
+      },
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "flyer close-up",
+      },
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "wall vinlys",
+      },
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "wall vinyls and flyers",
+      },
+      {
+      src: "/images/portfolio/valencia-fashion-week/vfw-06.jpg",
+        width: 1556,
+        height: 992,
+        hint: "wall vinlys and outside sign",
       },
     ],
   },
