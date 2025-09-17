@@ -199,6 +199,52 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "fanaticos",
+    title: "Fanáticos",
+    subtitle: "Graphic Design",
+    categories: ["Graphic Design"],
+    year: "2012",
+    mainImage: {
+      src: "/images/portfolio/fanaticos/fan-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "CD case cover mockup",
+    },
+    description: "Este proyecto consiste en el diseño gráfico para el álbum 'Bichos Raros' de la banda Fanáticos. El concepto visual interpreta el título del disco mediante la creación de figuras simétricas y lineales que asemejan insectos o criaturas abstractas. La estética se define por un minimalismo técnico, utilizando un fondo negro sobre el que destacan ilustraciones con un efecto estereoscópico o anaglifo (líneas rojas y cian). Este lenguaje de diseño se aplica de forma coherente a todas las piezas del álbum: la portada, el libreto interior con créditos y letras, y la galleta del CD, conformando una identidad visual coherente y distintiva.",
+    gallery: [
+      {
+      src: "/images/portfolio/fanaticos/fan-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "cover and CD mockup",
+      },
+      {
+      src: "/images/portfolio/fanaticos/fan-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "CD and booklet mockup",
+      },
+      {
+      src: "/images/portfolio/fanaticos/fan-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "booklet mockup",
+      },
+      {
+      src: "/images/portfolio/fanaticos/fan-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "cover design",
+      },
+      {
+      src: "/images/portfolio/fanaticos/fan-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "cover artwork",
+      },
+    ],
+  },
+  {
     id: "el-metodo-havana-7",
     title: "El Método Havana 7",
     subtitle: "Campaña Publicitaria",
