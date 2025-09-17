@@ -19,7 +19,7 @@ export type PortfolioItem = {
   }[];
 };
 
-export const portfolioCategories = ["All", "Web Design", "App Development", "Branding"];
+export const portfolioCategories = ["Todos", "Branding", "Diseño Web", "Packaging", "Publicitario", "Editorial", "Ilustración"];
 
 export const portfolioData: PortfolioItem[] = [
   {
@@ -48,7 +48,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "ayuda-a-la-ciencia",
     title: "Ayuda a la Ciencia",
     subtitle: "Branding & UI/UX",
-    categories: ["Branding", "Web Design"],
+    categories: ["Branding", "Diseño Web"],
     year: "2016",
     mainImage: {
       src: "/images/portfolio/ayuda-a-la-ciencia/aci-00.jpg",
@@ -122,7 +122,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "atria-jobs",
     title: "Atria Jobs",
     subtitle: "Branding & UI/UX",
-    categories: ["Branding", "Web Design"],
+    categories: ["Branding", "Diseño Web"],
     year: "2014",
     mainImage: {
       src: "/images/portfolio/atria-jobs/atr-00.jpg",
@@ -149,6 +149,76 @@ export const portfolioData: PortfolioItem[] = [
         width: 1556,
         height: 992,
         hint: "responsive panel on multiple devices",
+      },
+    ],
+  },
+  {
+    id: "gold-k",
+    title: "Gold K",
+    subtitle: "Branding & Packaging",
+    categories: ["Branding", "Packaging"],
+    year: "2013",
+    mainImage: {
+      src: "/images/portfolio/gold-k/gol-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "brand marquee on wood wall",
+    },
+    description: "Branding y packaging para Gold K, cava de alta gama con de virutas de oro de 24 quilates en su interior. El diseño está enfocado en comunicar lujo, exclusividad y calidad premium, utilizando una paleta de colores elegante de negro y dorado, y un logotipo que incorpora una corona como símbolo de estatus. Se presentan dos variantes del producto, 'Reserva Especial' y 'Premium', diferenciadas por el color de la cápsula (dorada y negra, respectivamente), pero unificadas bajo una misma identidad visual sofisticada que resalta el carácter opulento de la bebida.",
+    gallery: [
+      {
+      src: "/images/portfolio/gold-k/gol-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo construction angles",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand icons",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand marquee",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "business card mockup",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-06.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-07.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-08.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
+      },
+      {
+      src: "/images/portfolio/gold-k/gol-09.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
       },
     ],
   },
@@ -201,8 +271,8 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "fanaticos",
     title: "Fanáticos",
-    subtitle: "Graphic Design",
-    categories: ["Graphic Design"],
+    subtitle: "Packaging",
+    categories: ["Packaging"],
     year: "2012",
     mainImage: {
       src: "/images/portfolio/fanaticos/fan-00.jpg",
@@ -210,7 +280,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "CD case cover mockup",
     },
-    description: "Este proyecto consiste en el diseño gráfico para el álbum 'Bichos Raros' de la banda Fanáticos. El concepto visual interpreta el título del disco mediante la creación de figuras simétricas y lineales que asemejan insectos o criaturas abstractas. La estética se define por un minimalismo técnico, utilizando un fondo negro sobre el que destacan ilustraciones con un efecto estereoscópico o anaglifo (líneas rojas y cian). Este lenguaje de diseño se aplica de forma coherente a todas las piezas del álbum: la portada, el libreto interior con créditos y letras, y la galleta del CD, conformando una identidad visual coherente y distintiva.",
+    description: "Diseño gráfico para el álbum 'Bichos Raros' de la banda Fanáticos. El concepto visual interpreta el título del disco mediante la creación de figuras simétricas y lineales que asemejan insectos o criaturas abstractas. La estética se define por un minimalismo técnico, utilizando un fondo negro sobre el que destacan ilustraciones con un efecto estereoscópico o anaglifo (líneas rojas y cian). Este lenguaje de diseño se aplica de forma coherente a todas las piezas del álbum: la portada, el libreto interior con créditos y letras, y la galleta del CD, conformando una identidad visual coherente y distintiva.",
     gallery: [
       {
       src: "/images/portfolio/fanaticos/fan-01.jpg",
@@ -248,7 +318,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "el-metodo-havana-7",
     title: "El Método Havana 7",
     subtitle: "Campaña Publicitaria",
-    categories: ["Branding", "Advertising"],
+    categories: ["Branding", "Publicitario"],
     year: "2011",
     mainImage: {
       src: "/images/portfolio/el-metodo-havana-7/elm-00.jpg",
@@ -256,7 +326,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "logo perspective on dark background",
     },
-    description: "Este proyecto es una campaña de branding y publicidad para el ron Havana Club 7 Años bajo el concepto 'El Método Havana', utilizando una paleta de colores oscuros, rojos y dorados para evocar calidad y exclusividad. Las piezas gráficas incluyen un logotipo, un cartel y tarjetas promocionales.",
+    description: "Branding y campaña de publicidad para el ron Havana Club 7 Años bajo el concepto 'El Método Havana', utilizando una paleta de colores oscuros, rojos y dorados para evocar calidad y exclusividad. Las piezas gráficas incluyen un logotipo, un cartel y tarjetas promocionales.",
     gallery: [
       {
       src: "/images/portfolio/el-metodo-havana-7/elm-01.jpg",
@@ -269,6 +339,104 @@ export const portfolioData: PortfolioItem[] = [
         width: 1556,
         height: 992,
         hint: "flyer mockup",
+      },
+    ],
+  },
+  {
+    id: "galeria9",
+    title: "Galería 9",
+    subtitle: "Art Direction",
+    categories: ["Editorial", "Publicitario", "Diseño Web"],
+    year: "2011",
+    mainImage: {
+      src: "/images/portfolio/galeria9/gal-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "exhibition catalogs",
+    },
+    description: "Dirección de arte para galería9, una galería de arte en el centro de Valencia. Diseño de piezas para cada exposición, como catálogos y invitaciones postales, cartelería y proyecto web. Creación de sitio web y mantenimiento del catálogo digital.",
+    gallery: [
+      {
+      src: "/images/portfolio/galeria9/gal-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "exhibition catalogs back close-up",
+      },
+      {
+      src: "/images/portfolio/galeria9/gal-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "exhibition flyers",
+      },
+    ],
+  },
+  {
+    id: "granja-vectorial",
+    title: "Granja Vectorial",
+    subtitle: "Illustration",
+    categories: ["Ilustración"],
+    year: "2010",
+    mainImage: {
+      src: "/images/portfolio/granja-vectorial/gra-01.jpg",
+      width: 1556,
+      height: 992,
+      hint: "bird illustration",
+    },
+    description: "Este proyecto es una serie de ilustraciones digitales que presentan un bestiario de criaturas estilizadas con un lenguaje visual común. El estilo gráfico se basa en la técnica 'low-poly', construyendo los personajes (tortugas, una serpiente, un insecto) a partir de formas geométricas y polígonos de colores planos y vibrantes. Esta estética vectorial y facetada, combinada con fondos de colores intensos y degradados, crea un universo visual donde cada ilustración explora el diseño de personajes con una identidad gráfica distintiva y minimalista.",
+    gallery: [
+      {
+      src: "/images/portfolio/granja-vectorial/gra-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "turtles illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "snake illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "fly illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "crocodile illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-06.jpg",
+        width: 1556,
+        height: 992,
+        hint: "dog illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-07.jpg",
+        width: 1556,
+        height: 992,
+        hint: "monkey illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-08.jpg",
+        width: 1556,
+        height: 992,
+        hint: "koala illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-09.jpg",
+        width: 1556,
+        height: 992,
+        hint: "pig illustration",
+      },
+      {
+      src: "/images/portfolio/granja-vectorial/gra-10.jpg",
+        width: 1556,
+        height: 992,
+        hint: "frog illustration",
       },
     ],
   },
