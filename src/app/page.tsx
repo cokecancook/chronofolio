@@ -13,6 +13,9 @@ export default function Home() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
               Haz scroll para explorar mis proyectos pasados.
             </p>
+            <a href="https://cokestuyck.webflow.io" className="text-sm underline md:text-md max-w-3xl mx-auto mt-4">
+              Visita mi portfolio actual.
+            </a>
           </header>
 
           <PortfolioTimeline projects={portfolioData} categories={portfolioCategories} />
