@@ -93,6 +93,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
     let minDistance = Infinity;
     let closestCardId: string | null = null;
     const viewportCenter = window.innerHeight / 2;
+    const transitionThreshold = viewportCenter * 0.4; // Shorter distance for transition
 
     cardRefs.current.forEach((cardEl) => {
       if (!cardEl) return;
@@ -106,8 +107,10 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
       }
       
       const opacity = Math.max(0.4, 1 - distance / viewportCenter);
-      
       cardEl.style.setProperty('--opacity', opacity.toString());
+
+      const grayscaleValue = Math.min(1, distance / transitionThreshold);
+      cardEl.style.setProperty('--grayscale', grayscaleValue.toString());
     });
 
     setCenteredCardId(closestCardId);
@@ -172,7 +175,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
               ref={(el) => (cardRefs.current[index] = el)}
               data-project-id={project.id}
               className={cn(
-                "group portfolio-card relative mb-12 md:mb-24 opacity-0 transition-all duration-500 transform-gpu",
+                "group portfolio-card relative mb-12 md:mb-24 opacity-0",
                 "md:w-1/2",
                 index % 2 === 0 ? "md:pr-8 md:mr-auto" : "md:pl-8 md:ml-auto",
                  !isMobile && "md:[--opacity:0.4] md:[opacity:var(--opacity)]"
@@ -216,7 +219,20 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
       <style jsx>{`
         .portfolio-card {
-          transition-property: opacity, transform;
+          transition-property: opacity, transform, filter;
+        }
+        .is-visible .relative.cursor-pointer {
+            transition: filter 0.3s ease-in;
+        }
+        .is-visible:not(:hover) .relative.cursor-pointer {
+            filter: grayscale(var(--grayscale, 0));
+        }
+        .is-visible.group .relative.cursor-pointer {
+            transition-delay: 0s;
+            transition-duration: 0.2s; /* quick to active */
+        }
+        .is-visible.group:not([data-centered='true']) .relative.cursor-pointer {
+            transition-duration: 0.5s; /* slower to inactive */
         }
         .portfolio-card.is-visible {
           opacity: 1;
