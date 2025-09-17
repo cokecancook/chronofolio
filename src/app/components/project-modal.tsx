@@ -25,10 +25,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <div className="flex items-center gap-4 pt-2">
               <div className="flex gap-2 flex-wrap">
                 {project.categories.map((category, index) => (
-                  <Badge key={index} variant="secondary">{category}</Badge>
+                  <Badge key={index} className="text-md border-black" variant="secondary">{category}</Badge>
                 ))}
               </div>
-              <span className="text-sm text-muted-foreground">{project.year}</span>
+              <span className="text-sm font-headline tracking-tighter mt-1">{project.year}</span>
             </div>
           </DialogHeader>
         </div>
