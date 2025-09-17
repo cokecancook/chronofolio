@@ -331,6 +331,34 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "djembe",
+    title: "Djembé",
+    subtitle: "Logo",
+    categories: ["Logo"],
+    year: "2015",
+    mainImage: {
+      src: "/images/portfolio/djembe/dje-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo on wooden wall",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/djembe/dje-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo construction",
+      },
+      {
+      src: "/images/portfolio/djembe/dje-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo on corporate background",
+      },
+    ],
+  },
+  {
     id: "nepher",
     title: "Nepher",
     subtitle: "Branding",
