@@ -105,10 +105,8 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
         closestCardId = cardEl.dataset.projectId || null;
       }
       
-      const scale = Math.max(0.85, 1 - distance / (viewportCenter * 2));
       const opacity = Math.max(0.4, 1 - distance / viewportCenter);
       
-      cardEl.style.setProperty('--scale', scale.toString());
       cardEl.style.setProperty('--opacity', opacity.toString());
     });
 
@@ -177,13 +175,13 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
                 "group portfolio-card relative mb-12 md:mb-24 opacity-0 transition-all duration-500 transform-gpu",
                 "md:w-1/2",
                 index % 2 === 0 ? "md:pr-8 md:mr-auto" : "md:pl-8 md:ml-auto",
-                !isMobile && "md:[--scale:0.85] md:[--opacity:0.4] md:[transform:scale(var(--scale))] md:[opacity:var(--opacity)]"
+                 !isMobile && "md:[--opacity:0.4] md:[opacity:var(--opacity)]"
               )}
             >
               <div
                 className={cn(
                     "absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-background border-2 border-primary hidden md:block",
-                    index % 2 === 0 ? "-right-2 translate-x-1/2" : "-left-2 -translate-x-1/2",
+                    index % 2 === 0 ? "md:right-0 md:-translate-x-px" : "md:left-0 md:translate-x-px",
                     isCentered && "scale-150 bg-primary"
                 )}
                 style={{transition: 'transform 0.3s, background-color 0.3s'}}
