@@ -2,7 +2,7 @@ export type PortfolioItem = {
   id: string;
   title: string;
   subtitle: string;
-  category: string;
+  categories: string[];
   year: string;
   mainImage: {
     src: string;
@@ -23,30 +23,36 @@ export const portfolioCategories = ["All", "Web Design", "App Development", "Bra
 
 export const portfolioData: PortfolioItem[] = [
   {
-    id: "project-nova",
-    title: "Project Nova",
-    subtitle: "SaaS Platform UI/UX",
-    category: "Web Design",
-    year: "2024",
+    id: "ayuda-a-la-ciencia",
+    title: "Ayuda a la Ciencia",
+    subtitle: "Branding & UI/UX",
+    categories: ["Web Design", "Branding"],
+    year: "2016",
     mainImage: {
-      src: "https://picsum.photos/seed/nova1/800/600",
-      width: 800,
-      height: 600,
-      hint: "abstract geometric",
+      src: "/images/portfolio/ayuda-a-la-ciencia/aci-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo on website on ipad",
     },
-    description: "Project Nova is a complete redesign of a leading SaaS platform. The focus was on improving user workflow, creating a modern and intuitive interface, and building a scalable design system. We conducted extensive user research to inform our design decisions, resulting in a 40% increase in user satisfaction.",
+    description: "Proyecto de branding y diseño web para 'Ayuda a la Ciencia', una plataforma online dedicada a conectar a voluntarios con estudios científicos que necesitan participantes. El objetivo principal fue crear una experiencia de usuario intuitiva y amigable, con un portal accesible y claro. El trabajo abarcó desde la creación del logotipo y la identidad corporativa hasta el diseño de la interfaz de la página web.",
     gallery: [
       {
-        src: "https://picsum.photos/seed/nova2/800/600",
-        width: 800,
-        height: 600,
-        hint: "wireframe layout",
+        src: "/images/portfolio/ayuda-a-la-ciencia/aci-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "responsive website on multiple devices",
       },
       {
-        src: "https://picsum.photos/seed/nova3/800/600",
-        width: 800,
-        height: 600,
-        hint: "person laptop",
+        src: "/images/portfolio/ayuda-a-la-ciencia/aci-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "horizontal negative full logo on gradient background",
+      },
+      {
+        src: "/images/portfolio/ayuda-a-la-ciencia/aci-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "positive full logo",
       },
     ],
   },
@@ -54,7 +60,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "project-quantum",
     title: "Quantum",
     subtitle: "Mobile Banking App",
-    category: "App Development",
+    categories: ["App Development"],
     year: "2023",
     mainImage: {
       src: "https://picsum.photos/seed/quantum1/600/800",
@@ -82,7 +88,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "project-echo",
     title: "Echo",
     subtitle: "Branding & Identity",
-    category: "Branding",
+    categories: ["Branding"],
     year: "2023",
     mainImage: {
       src: "https://picsum.photos/seed/echo1/800/800",
@@ -110,7 +116,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "project-zenith",
     title: "Zenith",
     subtitle: "E-commerce Website",
-    category: "Web Design",
+    categories: ["Web Design"],
     year: "2022",
     mainImage: {
       src: "https://picsum.photos/seed/zenith1/800/500",
@@ -138,7 +144,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "project-fusion",
     title: "Fusion",
     subtitle: "Data Visualization Tool",
-    category: "App Development",
+    categories: ["App Development", "Web Design"],
     year: "2021",
     mainImage: {
       src: "https://picsum.photos/seed/fusion1/600/700",
@@ -166,7 +172,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "project-aura",
     title: "Aura",
     subtitle: "Wellness Brand Identity",
-    category: "Branding",
+    categories: ["Branding"],
     year: "2020",
     mainImage: {
       src: "https://picsum.photos/seed/aura1/700/700",
