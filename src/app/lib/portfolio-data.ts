@@ -97,6 +97,52 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "bangarang",
+    title: "Bangarang",
+    subtitle: "Branding",
+    categories: ["Branding"],
+    year: "2013",
+    mainImage: {
+      src: "/images/portfolio/bangarang/ban-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "brand marquee on wood wall",
+    },
+    description: "Para Bangarang se desarrolló un proyecto integral de branding y diseño de identidad visual. El proceso cubrió desde la creación del logotipo hasta su aplicación en papelería (tarjetas, flyers) y en elementos físicos del local, como vinilos y el toldo principal, logrando una imagen de marca coherente y unificada.",
+    gallery: [
+      {
+      src: "/images/portfolio/bangarang/ban-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo construction angles",
+      },
+      {
+      src: "/images/portfolio/bangarang/ban-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand icons",
+      },
+      {
+      src: "/images/portfolio/bangarang/ban-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand marquee",
+      },
+      {
+      src: "/images/portfolio/bangarang/ban-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "business card mockup",
+      },
+      {
+      src: "/images/portfolio/bangarang/ban-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brand pattern poster mockup",
+      },
+    ],
+  },
+  {
     id: "project-echo",
     title: "Echo",
     subtitle: "Branding & Identity",
