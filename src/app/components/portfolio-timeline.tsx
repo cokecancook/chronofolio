@@ -113,7 +113,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
                   />
                   <div 
                     className={cn(
-                      "absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-4",
+                      "absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center p-4",
                       !isActive && "hidden"
                     )}
                   >
