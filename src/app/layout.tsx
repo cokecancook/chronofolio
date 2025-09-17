@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'ChronoFolio',
-  description: 'A timeline portfolio to showcase your work.',
+  description: 'A timeline portfolio.',
 };
 
 export default function RootLayout({
