@@ -19,7 +19,7 @@ export default function Home() {
 
         </div>
       </main>
-      <footer className="w-full max-w-7xl mx-auto text-center mt-12 md:mt-24 py-8 border-t">
+      <footer className="w-full max-w-7xl mx-auto text-center mt-12 md:mt-24 py-8 px-4 border-t">
           <p className="text-muted-foreground">&copy; {new Date().getFullYear()} ChronoFolio. All rights reserved.</p>
       </footer>
     </div>

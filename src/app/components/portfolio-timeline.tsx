@@ -181,8 +181,8 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
               <div
                 className={cn(
                     "absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-background border-2 border-primary hidden md:block",
-                    index % 2 === 0 ? "md:right-0 md:-translate-x-px" : "md:left-0 md:translate-x-px",
-                    isCentered && "scale-150 bg-primary"
+                    index % 2 === 0 ? "md:right-0 md:translate-x-1/2" : "md:left-0 md:-translate-x-1/2",
+                    isCentered && "scale-125 bg-primary"
                 )}
                 style={{transition: 'transform 0.3s, background-color 0.3s'}}
               ></div>
