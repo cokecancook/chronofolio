@@ -26,7 +26,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
     if (activeFilter === "All") {
       return projects;
     }
-    return projects.filter((p) => p.category === activeFilter);
+    return projects.filter((p) => p.categories.includes(activeFilter));
   }, [activeFilter, projects]);
   
   const activeCardId = hoveredCardId;
