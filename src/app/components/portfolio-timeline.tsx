@@ -8,37 +8,9 @@ import { ProjectModal } from "./project-modal";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-interface PortfolioTimelineProps {
-  projects: PortfolioItem[];
-  categories: string[];
-}
-
-function throttle<T extends (...args: any[]) => void>(func: T, limit: number): T {
-  let inThrottle: boolean;
-  let lastFunc: NodeJS.Timeout;
-  let lastRan: number;
-  return function (this: any, ...args: Parameters<T>) {
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      lastRan = Date.now();
-      inThrottle = true;
-    } else {
-      clearTimeout(lastFunc);
-      lastFunc = setTimeout(function () {
-        if (Date.now() - lastRan >= limit) {
-          func.apply(context, args);
-          lastRan = Date.now();
-        }
-      }, limit - (Date.now() - lastRan));
-    }
-  } as T;
-}
-
 export function PortfolioTimeline({ projects, categories }: PortfolioTimelineProps) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
-  const [scrolledCardId, setScrolledCardId] = useState<string | null>(null);
   const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
   
   const isMobile = useIsMobile();
@@ -52,71 +24,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
     return projects.filter((p) => p.category === activeFilter);
   }, [activeFilter, projects]);
   
-  const activeCardId = hoveredCardId || scrolledCardId;
-
-  const handleScroll = useCallback(() => {
-    if (isMobile) {
-        let bestCardId: string | null = null;
-        let smallestTop: number | null = null;
-        cardRefs.current.forEach((cardEl) => {
-            if (!cardEl) return;
-            const rect = cardEl.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                if (smallestTop === null || rect.top < smallestTop) {
-                    smallestTop = rect.top;
-                    bestCardId = cardEl.dataset.projectId || null;
-                }
-            }
-        });
-
-        if (bestCardId) {
-            setScrolledCardId(bestCardId);
-        } else {
-            let minDistance = Infinity;
-            let closestCardId: string | null = null;
-            const viewportCenter = window.innerHeight / 2;
-
-            cardRefs.current.forEach((cardEl) => {
-                if (!cardEl) return;
-                const rect = cardEl.getBoundingClientRect();
-                const cardCenter = rect.top + rect.height / 2;
-                const distance = Math.abs(viewportCenter - cardCenter);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestCardId = cardEl.dataset.projectId || null;
-                }
-            });
-            setScrolledCardId(closestCardId);
-        }
-        return;
-    }
-    
-    let minDistance = Infinity;
-    let closestCardId: string | null = null;
-    const viewportCenter = window.innerHeight / 2;
-
-    cardRefs.current.forEach((cardEl) => {
-      if (!cardEl) return;
-      const rect = cardEl.getBoundingClientRect();
-      const cardCenter = rect.top + rect.height / 2;
-      const distance = Math.abs(viewportCenter - cardCenter);
-
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestCardId = cardEl.dataset.projectId || null;
-      }
-    });
-
-    setScrolledCardId(closestCardId);
-  }, [isMobile]);
-
-  const throttledScroll = useMemo(() => throttle(handleScroll, 50), [handleScroll]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", throttledScroll);
-    handleScroll(); 
-    return () => window.removeEventListener("scroll", throttledScroll);
-  }, [throttledScroll, handleScroll]);
+  const activeCardId = hoveredCardId;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -183,13 +91,13 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
                 className={cn(
                     "absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-background border-2 border-primary hidden md:block",
                     index % 2 === 0 ? "md:right-0 md:translate-x-1/2" : "md:left-0 md:-translate-x-1/2",
-                    isActive && "scale-125 bg-primary"
+                    isActive && "bg-primary"
                 )}
                 style={{transition: 'transform 0.1s, background-color 0.1s'}}
               ></div>
               
               <div className="relative cursor-pointer" onClick={() => setSelectedProject(project)}>
-                <div className={cn("relative overflow-hidden shadow-lg", !isActive && "grayscale")}>
+                <div className={cn("relative overflow-hidden shadow-lg")}>
                   <Image
                     src={project.mainImage.src}
                     width={project.mainImage.width}
