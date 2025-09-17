@@ -868,7 +868,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "galeria9",
     title: "galería9",
     subtitle: "Dirección de Arte",
-    categories: ["Publicitario"],
+    categories: ["Editorial", "Publicitario"],
     year: "2008",
     mainImage: {
       src: "/images/portfolio/galeria9/gal-00.jpg",
