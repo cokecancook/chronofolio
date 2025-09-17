@@ -23,7 +23,7 @@ export type PortfolioItem = {
   }[];
 };
 
-export const portfolioCategories = ["Todos", "Branding", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
+export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
 
 export const portfolioData: PortfolioItem[] = [
   {
@@ -40,7 +40,7 @@ export const portfolioData: PortfolioItem[] = [
     },
     description: "Presentación web para la casa de subastas de relojes 'Watchdrop'.",
     link: {
-      url: "/content/watchdrop/index.html",
+      url: "/content/portfolio/watchdrop/index.html",
       name: "Ver presentación"
     },
     gallery: [
@@ -55,6 +55,40 @@ export const portfolioData: PortfolioItem[] = [
         width: 1600,
         height: 1600,
         hint: "mockup slide",
+      },
+    ],
+  },
+  {
+    id: "maseuropa",
+    title: "maseuropa",
+    subtitle: "Branding",
+    categories: ["Branding"],
+    year: "2017",
+    mainImage: {
+      src: "/images/portfolio/maseuropa/mas-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "corporate bus",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/maseuropa/mas-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "mascot ad screenshot",
+      },
+      {
+      src: "/images/portfolio/maseuropa/mas-02.jpg",
+        width: 1640,
+        height: 620,
+        hint: "facebook cover",
+      },
+      {
+      src: "/images/portfolio/maseuropa/mas-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "stationery mockup",
       },
     ],
   },
@@ -81,6 +115,34 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "tamara-falco-preysler",
+    title: "Tamara Falcó Preysler",
+    subtitle: "Logo",
+    categories: ["Logo"],
+    year: "2017",
+    mainImage: {
+      src: "/images/portfolio/tamara-falco-preysler/tfp-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "logo on corporate laser background",
+    },
+    description: "Proyecto de identidad corporativa para el centro de estética BeautyLUZ. Se desarrolló la marca y sus aplicaciones a diversas piezas, tanto gráficas (flyers) como de señalética y rotulación del local. Esto incluyó el diseño de vinilos para el escaparate, la banderola exterior y la persiana metálica.",
+    gallery: [
+      {
+      src: "/images/portfolio/tamara-falco-preysler/tfp-01.jpg",
+        width: 1600,
+        height: 900,
+        hint: "services flyer",
+      },
+      {
+      src: "/images/portfolio/tamara-falco-preysler/tfp-02.jpg",
+        width: 1600,
+        height: 900,
+        hint: "services flyer",
+      },
+    ],
+  },
+  {
     id: "centro-porsche-valencia",
     title: "Centro Porsche Valencia",
     subtitle: "Diseño Gráfico",
@@ -99,6 +161,12 @@ export const portfolioData: PortfolioItem[] = [
         width: 1556,
         height: 992,
         hint: "folder mockup open",
+      },
+      {
+        src: "/images/portfolio/porsche-valencia/por-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
       },
     ],
   },
@@ -796,4 +864,31 @@ export const portfolioData: PortfolioItem[] = [
       },
     ],
   },
-];
+  {
+    id: "galeria9",
+    title: "galería9",
+    subtitle: "Dirección de Arte",
+    categories: ["Publicitario"],
+    year: "2008",
+    mainImage: {
+      src: "/images/portfolio/galeria9/gal-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo perspective on dark background",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/galeria9/gal-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "poster mockup",
+      },
+      {
+      src: "/images/portfolio/galeria9/gal-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "flyer mockup",
+      },
+    ],
+  },];
