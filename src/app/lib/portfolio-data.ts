@@ -19,14 +19,14 @@ export type PortfolioItem = {
   }[];
 };
 
-export const portfolioCategories = ["Todos", "Branding", "Diseño Web", "Packaging", "Publicitario", "Editorial", "Ilustración"];
+export const portfolioCategories = ["Todos", "Branding", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
 
 export const portfolioData: PortfolioItem[] = [
   {
     id: "beauty-luz",
     title: "Beauty Luz",
     subtitle: "Branding",
-    categories: ["Branding"],
+    categories: ["Logo", "Branding"],
     year: "2017",
     mainImage: {
       src: "/images/portfolio/beauty-luz/bea-00.jpg",
@@ -45,10 +45,84 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "centro-porsche-valencia",
+    title: "Centro Porsche Valencia",
+    subtitle: "Diseño Gráfico",
+    categories: ["Diseño Gráfico"],
+    year: "2016",
+    mainImage: {
+      src: "/images/portfolio/porsche-valencia/por-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "folder mockup",
+    },
+    description: "Diseño de carpeta de bienvenida y satisfacción post-venta, siguiendo estrictamente las directrices de la identidad visual de Porsche para entregar documentación de forma exclusiva. También diseñé e instalé las firmas de correo electrónico corporativas para todo el equipo, asegurando una comunicación de marca coherente y profesional en todos los puntos de contacto con el cliente.",
+    gallery: [
+      {
+        src: "/images/portfolio/porsche-valencia/por-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "folder mockup open",
+      },
+    ],
+  },
+  {
+    id: "shoot-the-twin",
+    title: "Shoot The Twin",
+    subtitle: "Logo",
+    categories: ["Logo"],
+    year: "2016",
+    mainImage: {
+      src: "/images/portfolio/shoot-the-twin/sho-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "jacket",
+    },
+    description: "Diseño de logotipo que contrasta un estilo retro con uno minimalista. La identidad principal se presenta en un logotipo de emblema circular con una tipografía de inspiración Art Déco, que le otorga una estética vintage y elaborada. A partir de este, se extrae un isotipo secundario, una abstracción minimalista que reduce el logo a sus elementos esenciales —un círculo y dos líneas, 'shoot the twin'—, creando una figura icónica y memorable que evoca a una persona. Esta versátil identidad visual funciona tanto en un sobrio blanco y negro como en una paleta de colores más moderna y suave, con tonos pastel como el verde menta y el lila.",
+    gallery: [
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "negative logo on dark background",
+      },
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "color variation favicon",
+      },
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "baseball t-shirt",
+      },
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "cap",
+      },
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "t-shirt tag mockup",
+      },
+      {
+      src: "/images/portfolio/shoot-the-twin/sho-06.jpg",
+        width: 1556,
+        height: 992,
+        hint: "polo",
+      },
+    ],
+  },
+  {
     id: "ayuda-a-la-ciencia",
     title: "Ayuda a la Ciencia",
     subtitle: "Branding & UI/UX",
-    categories: ["Branding", "Diseño Web"],
+    categories: ["Logo", "Branding", "Diseño Web"],
     year: "2016",
     mainImage: {
       src: "/images/portfolio/ayuda-a-la-ciencia/aci-00.jpg",
@@ -79,10 +153,142 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "miguel-vizcaino",
+    title: "Miguel Vizcaíno",
+    subtitle: "Logo",
+    categories: ["Logo"],
+    year: "2015",
+    mainImage: {
+      src: "/images/portfolio/miguel-vizcaino/mig-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo",
+    },
+    description: "Diseño de logotipo para el diseñador de moda Miguel Vizcaino, definido por un enfoque minimalista, geométrico y sofisticado, utilizando una tipografía de palo seco, muy fina y expandida, que aporta un carácter moderno y exclusivo. El sistema de marca incluye tanto el logotipo con el nombre completo como un monograma circular que fusiona las iniciales 'M' y 'V'. Al aplicarse sobre la fotografía de moda, de estilo que actúa como una firma sutil que complementa la dirección de arte sin restarle protagonismo a las prendas.",
+    gallery: [
+      {
+      src: "/images/portfolio/miguel-vizcaino/mig-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo construction",
+      },
+      {
+      src: "/images/portfolio/miguel-vizcaino/mig-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "line monogram",
+      },
+      {
+      src: "/images/portfolio/miguel-vizcaino/mig-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "monogram with logo",
+      },
+      {
+      src: "/images/portfolio/miguel-vizcaino/mig-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "billboard with logo and model",
+      },
+      {
+      src: "/images/portfolio/miguel-vizcaino/mig-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "billboard with logo and model",
+      },
+    ],
+  },
+  {
+    id: "ruiz-de-la-prada-arquitectos",
+    title: "Ruiz de la Prada Arquitectos",
+    subtitle: "Branding",
+    categories: ["Logo", "Branding"],
+    year: "2015",
+    mainImage: {
+      src: "/images/portfolio/ruiz-de-la-prada-arquitectos/rdp-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo",
+    },
+    description: "Desarrollo de identidad corporativa para el grupo Ruiz de la Prada, que integra sus tres áreas de negocio: Arquitectura, Construcción y Paisajismo. El diseño se articula en torno a un logotipo tipográfico con una estructura modular y de bloque, que evoca solidez y un carácter arquitectónico. La clave del sistema es un código de colores (magenta, gris y verde) que identifica y diferencia a cada una de las divisiones. La identidad, que incluye también un monograma para aplicaciones abreviadas, se aplica en piezas como tarjetas de visita transparentes que refuerzan la imagen de una empresa moderna e innovadora.",
+    gallery: [
+      {
+      src: "/images/portfolio/ruiz-de-la-prada-arquitectos/rdp-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo construction",
+      },
+      {
+      src: "/images/portfolio/ruiz-de-la-prada-arquitectos/rdp-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "line monogram",
+      },
+    ],
+  },
+  {
+    id: "nepher",
+    title: "Nepher",
+    subtitle: "Branding",
+    categories: ["Logo", "Branding"],
+    year: "2015",
+    mainImage: {
+      src: "/images/portfolio/nepher/nep-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo on corporate background",
+    },
+    description: "Desarrollo de identidad de marca integral para Nepher, una empresa del sector de la belleza y el bienestar que opera bajo el lema 'Salud, Belleza & Armonía'. El concepto visual se inspira en la delicadeza, la transformación y la naturaleza, utilizando la metáfora del diente de león y una paleta de colores suaves y elegantes para transmitir calma y sofisticación. El logotipo, minimalista, junto con la identidad visual, se aplica de forma coherente a través de un amplio abanico de soportes, incluyendo tarjetas de visita, bonos de regalo, tarjetas de fidelización y papelería corporativa, construyendo una imagen de marca profesional, serena y cohesionada.",
+    gallery: [
+      {
+      src: "/images/portfolio/nepher/nep-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "secondary logo on corporate background",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "negative logo on corporate background",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "business cards mockup",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "street sign logo mockup",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "brochure mockup",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "notepad mockup",
+      },
+      {
+      src: "/images/portfolio/nepher/nep-05.jpg",
+        width: 1556,
+        height: 992,
+        hint: "flyers mockup",
+      },
+    ],
+  },
+  {
     id: "cokecancook",
     title: "cokecancook",
     subtitle: "Branding Personal",
-    categories: ["Branding"],
+    categories: ["Logo", "Branding"],
     year: "2015",
     mainImage: {
       src: "/images/portfolio/cokecancook/cok-00.jpg",
@@ -122,7 +328,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "atria-jobs",
     title: "Atria Jobs",
     subtitle: "Branding & UI/UX",
-    categories: ["Branding", "Diseño Web"],
+    categories: ["Logo", "Branding", "Diseño Web"],
     year: "2014",
     mainImage: {
       src: "/images/portfolio/atria-jobs/atr-00.jpg",
@@ -153,10 +359,78 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "siami",
+    title: "Siami",
+    subtitle: "Logo",
+    categories: ["Logo"],
+    year: "2014",
+    mainImage: {
+      src: "/images/portfolio/siami/sia-00.jpg",
+      width: 1333,
+      height: 1333,
+      hint: "negative horizontal logo on dark background",
+    },
+    description: "Diseño de logotipo para Siami, una empresa especializada en sistemas audiovisuales. El concepto se centra en un isotipo, con formato de icono de aplicación, donde la letra 'S' está formada por la silueta de un cable con sus conectores, representando de manera directa y conceptual la actividad de la empresa. Este símbolo se acompaña de una tipografía fina y geométrica que refuerza el carácter tecnológico y moderno de la marca, logrando una identidad limpia y alineada con su sector.",
+    gallery: [
+      {
+      src: "/images/portfolio/siami/sia-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo",
+      },
+      {
+      src: "/images/portfolio/siami/sia-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "negative logo close-up",
+      },
+    ],
+  },
+  {
+    id: "imz",
+    title: "Instituto Médico Zahrawi",
+    subtitle: "Branding",
+    categories: ["Logo", "Branding"],
+    year: "2014",
+    mainImage: {
+      src: "/images/portfolio/imz/imz-00.jpg",
+      width: 1333,
+      height: 1333,
+      hint: "logo",
+    },
+    description: "Desarrollo de identidad corporativa completa para el 'Instituto Médico Zahrawi'. El diseño busca proyectar profesionalismo, confianza y cuidado, utilizando un logotipo que combina una tipografía serif con un símbolo de dos arcos verdes que evocan la forma de un ojo, sugiriendo visión, precisión y bienestar. La identidad visual, que incluye una versión compacta del monograma 'IMZ', se aplica de manera consistente a través de un amplio abanico de piezas, desde la papelería corporativa hasta material publicitario y aplicaciones digitales, asegurando una imagen de marca sólida, coherente y fácilmente reconocible.",
+    gallery: [
+      {
+      src: "/images/portfolio/imz/imz-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "business card mockup",
+      },
+      {
+      src: "/images/portfolio/imz/imz-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "stationery mockup",
+      },
+      {
+      src: "/images/portfolio/imz/imz-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "poster mockup",
+      },
+      {
+      src: "/images/portfolio/imz/imz-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "logo 3d mockup on wood wall",
+      },
+    ],
+  },
+  {
     id: "gold-k",
     title: "Gold K",
-    subtitle: "Branding & Packaging",
-    categories: ["Branding", "Packaging"],
+    subtitle: "Logo & Packaging",
+    categories: ["Logo", "Packaging"],
     year: "2013",
     mainImage: {
       src: "/images/portfolio/gold-k/gol-00.jpg",
@@ -226,7 +500,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "bangarang",
     title: "Bangarang",
     subtitle: "Branding",
-    categories: ["Branding"],
+    categories: ["Logo", "Branding"],
     year: "2013",
     mainImage: {
       src: "/images/portfolio/bangarang/ban-00.jpg",
@@ -315,10 +589,32 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "hannah",
+    title: "Hannah",
+    subtitle: "Logo Design",
+    categories: ["Logo"],
+    year: "2012",
+    mainImage: {
+      src: "/images/portfolio/hannah/han-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "logo color animated gif",
+    },
+    description: "Diseño de logotipo para marca personal. El elemento central es un monograma que fusiona las letras 'H' y 'N' dentro de un círculo, utilizando un estilo de línea fina y geométrica para crear un símbolo moderno y equilibrado. Este enfoque lineal se refleja en la tipografía personalizada del nombre, aportando coherencia visual. La paleta de colores, que combina el blanco y negro con un acento de verde menta, aporta un toque de frescura, resultando en una identidad visual limpia, personal y versátil, adaptable a formatos animados para uso digital.",
+    gallery: [
+      {
+      src: "/images/portfolio/hannah/han-01.gif",
+        width: 1556,
+        height: 992,
+        hint: "logo",
+      },
+    ],
+  },
+  {
     id: "el-metodo-havana-7",
     title: "El Método Havana 7",
     subtitle: "Campaña Publicitaria",
-    categories: ["Branding", "Publicitario"],
+    categories: ["Logo", "Publicitario"],
     year: "2011",
     mainImage: {
       src: "/images/portfolio/el-metodo-havana-7/elm-00.jpg",
@@ -339,34 +635,6 @@ export const portfolioData: PortfolioItem[] = [
         width: 1556,
         height: 992,
         hint: "flyer mockup",
-      },
-    ],
-  },
-  {
-    id: "galeria9",
-    title: "Galería 9",
-    subtitle: "Art Direction",
-    categories: ["Editorial", "Publicitario", "Diseño Web"],
-    year: "2011",
-    mainImage: {
-      src: "/images/portfolio/galeria9/gal-00.jpg",
-      width: 1556,
-      height: 992,
-      hint: "exhibition catalogs",
-    },
-    description: "Dirección de arte para galería9, una galería de arte en el centro de Valencia. Diseño de piezas para cada exposición, como catálogos y invitaciones postales, cartelería y proyecto web. Creación de sitio web y mantenimiento del catálogo digital.",
-    gallery: [
-      {
-      src: "/images/portfolio/galeria9/gal-01.jpg",
-        width: 1556,
-        height: 992,
-        hint: "exhibition catalogs back close-up",
-      },
-      {
-      src: "/images/portfolio/galeria9/gal-02.jpg",
-        width: 1556,
-        height: 992,
-        hint: "exhibition flyers",
       },
     ],
   },
