@@ -52,8 +52,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </Carousel>
           </div>
           <div>
-            <DialogDescription as="div">
-                <p className="text-base leading-relaxed text-foreground/80">{project.description}</p>
+            <DialogDescription className="text-base leading-relaxed text-foreground/80">
+              {project.description}
             </DialogDescription>
           </div>
         </div>
