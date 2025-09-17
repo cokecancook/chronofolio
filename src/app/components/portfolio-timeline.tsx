@@ -191,7 +191,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
               ></div>
               
               <div className="relative cursor-pointer" onClick={() => setSelectedProject(project)}>
-                <div className="relative overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
+                <div className={cn("relative overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl", !isCentered && "grayscale")}>
                   <Image
                     src={project.mainImage.src}
                     width={project.mainImage.width}
@@ -202,7 +202,7 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
                   />
                   <div 
                     className={cn(
-                      "absolute inset-0 bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300",
+                      "absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-4",
                       isCentered ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                     )}
                   >
@@ -219,22 +219,9 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
       <style jsx>{`
         .portfolio-card {
-          transition-property: opacity, transform, filter;
+          transition-property: opacity, transform;
         }
-        .is-visible .relative.cursor-pointer {
-            transition: filter 0.3s ease-in;
-        }
-        .is-visible:not(:hover) .relative.cursor-pointer {
-            filter: grayscale(var(--grayscale, 0));
-        }
-        .is-visible.group .relative.cursor-pointer {
-            transition-delay: 0s;
-            transition-duration: 0.2s; /* quick to active */
-        }
-        .is-visible.group:not([data-centered='true']) .relative.cursor-pointer {
-            transition-duration: 0.5s; /* slower to inactive */
-        }
-        .portfolio-card.is-visible {
+        .is-visible {
           opacity: 1;
         }
         @media (min-width: 768px) {
