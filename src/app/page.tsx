@@ -11,10 +11,10 @@ export default function Home() {
               ChronoFolio
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
-              Haz scroll para explorar mis proyectos pasados.
+              Haz scroll para explorar mis proyectos pasados
             </p>
             <a href="https://cokestuyck.webflow.io" className="text-sm underline md:text-md max-w-3xl mx-auto mt-4">
-              Visita mi portfolio actual.
+              Visita mi portfolio actual
             </a>
           </header>
 
