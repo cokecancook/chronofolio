@@ -23,7 +23,7 @@ export type PortfolioItem = {
   }[];
 };
 
-export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
+export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Diseño App", "Diseño Web", "Logo", "Packaging", "Publicitario", "Editorial", "Ilustración"];
 
 export const portfolioData: PortfolioItem[] = [
   {
@@ -145,9 +145,41 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "komo",
+    title: "Komo",
+    subtitle: "Branding & Diseño App",
+    categories: ["Diseño Gráfico", "Branding", "Diseño Web"],
+    year: "2020",
+    mainImage: {
+      src: "/images/portfolio/komo/kom-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "",
+    link: {
+      url: "/content/portfolio/watchdrop/index.html",
+      name: "Ver presentación"
+    },
+    gallery: [
+      {
+      src: "/images/portfolio/komo/kom-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/komo/kom-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+    ],
+  },
+  {
     id: "cicma",
     title: "Cicma",
-    subtitle: "Branding & Web Design",
+    subtitle: "Branding & Diseño Web",
     categories: ["Diseño Gráfico", "Branding", "Diseño Web"],
     year: "2020",
     mainImage: {
@@ -185,8 +217,8 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "ivirma-global-education",
     title: "IVIRMA Global Education",
-    subtitle: "Graphic Design",
-    categories: ["Graphic Design", "Web Design"],
+    subtitle: "Diseño Gráfico",
+    categories: ["Diseño Gráfico", "Diseño Web"],
     year: "2019",
     mainImage: {
       src: "/images/portfolio/ivirma/ivi-00.jpg",
@@ -196,6 +228,12 @@ export const portfolioData: PortfolioItem[] = [
     },
     description: "",
     gallery: [
+      {
+      src: "/images/portfolio/ivirma/ivi.mov",
+        width: 1556,
+        height: 992,
+        hint: "mascot ad screenshot",
+      },
       {
       src: "/images/portfolio/ivirma/ivi-01.jpg",
         width: 1556,
@@ -209,7 +247,7 @@ export const portfolioData: PortfolioItem[] = [
         hint: "facebook cover",
       },
       {
-      src: "/images/portfolio/ivirma/ivi-03.jpg",
+      src: "/images/portfolio/ivirma/ivi-03.gif",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
@@ -268,6 +306,12 @@ export const portfolioData: PortfolioItem[] = [
     gallery: [
       {
       src: "/images/portfolio/maseuropa/mas-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "mascot ad screenshot",
+      },
+      {
+      src: "/images/portfolio/maseuropa/mas.mov",
         width: 1556,
         height: 992,
         hint: "mascot ad screenshot",
