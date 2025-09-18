@@ -159,13 +159,13 @@ export const portfolioData: PortfolioItem[] = [
         hint: "stationery mockup",
       },
       {
-      src: "/images/portfolio/ivirma/ivi-05.gif",
+      src: "/images/portfolio/ivirma/ivi-05.jpg",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
       },
       {
-      src: "/images/portfolio/ivirma/ivi-06.jpg",
+      src: "/images/portfolio/ivirma/ivi-06.gif",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
@@ -178,6 +178,12 @@ export const portfolioData: PortfolioItem[] = [
       },
       {
       src: "/images/portfolio/ivirma/ivi-08.jpg",
+        width: 1556,
+        height: 992,
+        hint: "stationery mockup",
+      },
+      {
+      src: "/images/portfolio/ivirma/ivi-09.jpg",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
@@ -265,6 +271,34 @@ export const portfolioData: PortfolioItem[] = [
         width: 1600,
         height: 900,
         hint: "services flyer",
+      },
+    ],
+  },
+  {
+    id: "unas-vacaciones",
+    title: "Unas Vacaciones de la Ciudad al Campo",
+    subtitle: "Editorial",
+    categories: ["Editorial"],
+    year: "2016",
+    mainImage: {
+      src: "/images/portfolio/unas-vacaciones/una-00.jpg",
+      width: 1556,
+      height: 992,
+      hint: "folder mockup",
+    },
+    description: "",
+    gallery: [
+      {
+        src: "/images/portfolio/unas-vacaciones/una-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "folder mockup open",
+      },
+      {
+        src: "/images/portfolio/unas-vacaciones/una-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
       },
     ],
   },
