@@ -27,6 +27,86 @@ export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Di
 
 export const portfolioData: PortfolioItem[] = [
   {
+    id: "audio-devices",
+    title: "Audio Devices",
+    subtitle: "Ilustración",
+    categories: ["Ilustración"],
+    year: "2024",
+    mainImage: {
+      src: "/images/portfolio/audio-devices/aud-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/audio-devices/aud-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/audio-devices/aud-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/audio-devices/aud-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/audio-devices/aud-04.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/audio-devices/aud-05.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+    ],
+  },
+  {
+    id: "cristina-y-pablo",
+    title: "Cristina & Pablo",
+    subtitle: "Diseño Gráfico",
+    categories: ["Diseño Gráfico"],
+    year: "2023",
+    mainImage: {
+      src: "/images/portfolio/cristina-y-pablo/cyp-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "",
+    gallery: [
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-01.gif",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+    ],
+  },
+  {
     id: "kensa",
     title: "Kensa",
     subtitle: "Folleto",
@@ -131,6 +211,12 @@ export const portfolioData: PortfolioItem[] = [
     },
     gallery: [
       {
+      src: "/images/portfolio/watchdrop/wat-01.gif",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
       src: "/images/portfolio/watchdrop/wat-01.jpg",
         width: 1600,
         height: 1600,
@@ -229,9 +315,9 @@ export const portfolioData: PortfolioItem[] = [
     description: "",
     gallery: [
       {
-      src: "/images/portfolio/ivirma/ivi.mov",
-        width: 1556,
-        height: 992,
+      src: "/images/portfolio/ivirma/ivi-01.gif",
+        width: 1920,
+        height: 1200,
         hint: "mascot ad screenshot",
       },
       {
@@ -306,12 +392,6 @@ export const portfolioData: PortfolioItem[] = [
     gallery: [
       {
       src: "/images/portfolio/maseuropa/mas-01.jpg",
-        width: 1556,
-        height: 992,
-        hint: "mascot ad screenshot",
-      },
-      {
-      src: "/images/portfolio/maseuropa/mas.mov",
         width: 1556,
         height: 992,
         hint: "mascot ad screenshot",
