@@ -46,6 +46,30 @@ export const portfolioData: PortfolioItem[] = [
         height: 1600,
         hint: "image slide",
       },
+      {
+      src: "/images/portfolio/kensa/ken-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/kensa/ken-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/kensa/ken-04.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/kensa/ken-05.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
     ],
   },
   {
