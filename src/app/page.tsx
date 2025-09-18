@@ -19,7 +19,14 @@ export default function Home() {
           </header>
 
           <PortfolioTimeline projects={portfolioData} categories={portfolioCategories} />
-
+          <section className="text-center mb-12 md:mb-24">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
+              Te has quedado con ganas de más?
+            </p>
+            <a href="/content/coke-stuyck-portfolio-2011.pdf" className="text-sm underline md:text-md max-w-3xl mx-auto mt-4">
+              Visita mi primer portfolio
+            </a>
+          </section>
         </div>
       </main>
       <footer className="w-full max-w-7xl mx-auto text-center py-8 px-4 border-t">
