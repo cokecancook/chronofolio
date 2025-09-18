@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center justify-center p-4 md:p-8 lg:p-12">
         <div className="w-full max-w-7xl mx-auto">
           <header className="text-center mb-12 md:mb-24">
-            <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-foreground">
+            <h1 className="text-3xl md:text-7xl font-extrabold font-headline tracking-tighter text-foreground">
               ChronoFolio
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
