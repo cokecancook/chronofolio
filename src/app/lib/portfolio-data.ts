@@ -873,7 +873,7 @@ export const portfolioData: PortfolioItem[] = [
         hint: "brand pattern poster mockup",
       },
       {
-      src: "/images/portfolio/gold-k/gol-09.jpg",
+      src: "/images/portfolio/gold-k/gol-08.jpg",
         width: 1556,
         height: 992,
         hint: "brand pattern poster mockup",
