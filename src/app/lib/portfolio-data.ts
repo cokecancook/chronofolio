@@ -462,7 +462,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "folder mockup",
     },
-    description: "'Unas Vacaciones de la Ciudad al Campo' es un proyecto de diseño editorial con un profundo significado personal. Se trata de la maquetación del libro escrito por mi padre, Jorge Stuyck del Portillo, que narra sus recuerdos de infancia. El libro nació de un proceso de superación personal, ya que fue escrito como parte de su rehabilitación con una logopeda tras sufrir un ictus. Mi labor consistió en diseñar y estructurar el libro, integrando sus textos con las ilustraciones originales creadas por él mismo. El objetivo fue crear una composición limpia y cálida que arropara la historia, respetando su sensibilidad y poniendo en valor tanto la narrativa como el arte. El resultado es un homenaje a la memoria, la resiliencia y la creatividad, un proyecto que trasciende el diseño para convertirse en un legado familiar.",
+    description: "'Unas Vacaciones de la Ciudad al Campo' es un proyecto de diseño editorial con un profundo significado personal. Se trata de la maquetación del libro escrito por mi padre, Jorge Stuyck del Portillo, que narra sus recuerdos de infancia. El libro nació de un proceso de superación personal, ya que fue escrito como parte de su rehabilitación con una logopeda tras sufrir un ictus. Mi labor consistió en diseñar y estructurar el libro, integrando sus textos con las ilustraciones originales creadas por él mismo. El objetivo fue crear una composición limpia y cálida que arropara la historia, respetando su sensibilidad y poniendo en valor tanto la narrativa como el arte. El resultado es un homenaje a la memoria, la superación y la creatividad, un proyecto que trasciende el diseño para convertirse en un legado familiar.",
     gallery: [
       {
         src: "/images/portfolio/unas-vacaciones/una-01.jpg",
@@ -678,7 +678,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "logo on wooden wall",
     },
-    description: "",
+    description: "Diseño de logotipo para 'Djembe', un bar de playa con una marcada inspiración en la cultura surf y reggae. El objetivo era crear una identidad visual vibrante, relajada y memorable. El diseño se basa en una tipografía personalizada de estilo manual, que le aporta un carácter único y cercano. El logotipo se estructura en forma de emblema, utilizando la silueta de una tabla de surf como contenedor principal, lo que lo vincula directamente con el ambiente costero. La paleta de colores, inspirada en la bandera rasta, utiliza el rojo, verde y amarillo para transmitir una sensación de energía, naturaleza y buena vibra. El resultado es una marca con fuerte personalidad, perfectamente alineada con el espíritu de un bar de playa.",
     gallery: [
       {
       src: "/images/portfolio/djembe/dje-01.jpg",
