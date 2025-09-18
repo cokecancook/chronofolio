@@ -918,7 +918,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 1333,
       hint: "poster mockup",
     },
-    description: "",
+    description: "Durante mi etapa en 'Moddos', un club de empresas, desempeñé un rol de diseñador encargado de la comunicación visual tanto para la organización principal como para sus diversas compañías asociadas. Mi labor principal se centró en el diseño y la maquetación de las revistas online del club, creando contenido editorial digital para fomentar la conexión entre los miembros. Además, desarrollé una amplia variedad de material corporativo, no solo para el club, sino también para las empresas que lo conformaban, adaptándome a sus distintas identidades de marca y necesidades de comunicación. Esta experiencia me permitió trabajar en un entorno dinámico y gestionar múltiples proyectos y estilos de forma simultánea.",
     gallery: [
       {
       src: "/images/portfolio/moddos/mod-01.jpg",
@@ -1280,7 +1280,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "logo perspective on dark background",
     },
-    description: "",
+    description: "Durante mi larga trayectoria en galería9, desempeñé un rol integral como el diseñador principal, encargado de toda la comunicación visual y la estrategia digital de la galería. Mis responsabilidades abarcaban desde el concepto hasta la ejecución de cada aspecto de la presencia de la marca. Para cada exposición, gestionaba el ciclo completo de comunicación: desde el diseño de la cartelería y los flyers, hasta la fotografía de las obras de arte y la actualización del contenido en la página web. Además, lideré proyectos estratégicos clave para la modernización de la galería, como la digitalización completa de su fondo artístico para su preservación y la creación desde cero de su tienda online. Finalmente, también me encargaba de la planificación y el diseño de las campañas de publicidad. Este rol multifacético me permitió no solo definir la identidad visual de la galería, sino también impulsar su transición al espacio digital y comercial.",
     gallery: [
       {
       src: "/images/portfolio/galeria9/gal-01.jpg",
