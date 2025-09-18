@@ -38,7 +38,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: "",
+    description: "'Audio Devices' es una colección de ilustraciones hiperrealistas centrada en amplificadores de audio vintage. Cada pieza ha sido creada meticulosamente en Figma, destacando los detalles y la estética clásica de estos icónicos equipos de sonido. El proyecto es un homenaje visual a la ingeniería y el diseño de la época dorada del audio.",
     gallery: [
       {
       src: "/images/portfolio/audio-devices/aud-01.jpg",
@@ -84,7 +84,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: "",
+    description: "El proyecto para la boda de Cristina y Pablo consistió en el diseño de una identidad visual completa y unificada. El elemento central del diseño es una fotografía de la pared de la iglesia donde se celebró la ceremonia, utilizada como fondo, así como detalles extraídos del forjado, para crear una atmósfera personal y coherente en todas las piezas gráficas. Para la comunicación se emplearon dos estilos tipográficos: una fuente manuscrita animada para el 'Save the Date', que aporta un toque personal y dinámico, y una tipografía serif para el resto de textos. Además, se desarrolló una landing page que centralizaba toda la información útil para los invitados, como direcciones y un formulario de confirmación, completando así una experiencia de usuario cuidada y funcional.",
     gallery: [
       {
       src: "/images/portfolio/cristina-y-pablo/cyp-01.gif",
@@ -94,12 +94,6 @@ export const portfolioData: PortfolioItem[] = [
       },
       {
       src: "/images/portfolio/cristina-y-pablo/cyp-01.jpg",
-        width: 1600,
-        height: 1600,
-        hint: "image slide",
-      },
-      {
-      src: "/images/portfolio/cristina-y-pablo/cyp-02.jpg",
         width: 1600,
         height: 1600,
         hint: "image slide",
@@ -118,7 +112,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: "",
+    description: "'Kensa' es un proyecto de diseño editorial que aborda la ciclicidad femenina a través de un folleto informativo. El diseño está concebido para educar y empoderar, presentando las fases del ciclo menstrual de una manera clara, accesible y visualmente atractiva. El objetivo es normalizar la conversación sobre la salud femenina y proporcionar una herramienta para el autoconocimiento, utilizando un lenguaje gráfico cuidado y respetuoso.",
     gallery: [
       {
       src: "/images/portfolio/kensa/ken-01.jpg",
@@ -164,7 +158,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: "",
+    description: "Peaberry es un proyecto de identidad de marca desarrollado para una cafetería especializada en almuerzos saludables. El concepto visual se inspira en el origen del café: el logotipo es una abstracción de la sección de una baya de peaberry, y la paleta de colores utiliza tonos marrones y verdes que evocan el grano antes de su tueste. La identidad se aplicó a diversos elementos, incluyendo una señalética interior y exterior fabricada en madera para aportar un toque orgánico y cálido. El resultado es una marca que trata de comunicar sus valores de naturalidad, salud y calidad.",
     gallery: [
       {
       src: "/images/portfolio/peaberry/pea-01.jpg",
@@ -242,11 +236,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: "",
-    link: {
-      url: "/content/portfolio/watchdrop/index.html",
-      name: "Ver presentación"
-    },
+    description: "Diseño de UI/UX para una app de compraventa de productos naturales de 'kilómetro 0'. El objetivo de la app es conectar directamente a consumidores con productores locales, fomentando el comercio justo y la alimentación sostenible. El diseño se enfoca en una experiencia de usuario intuitiva y fluida, que permite a los usuarios explorar productores cercanos, descubrir productos de temporada y realizar compras de forma segura y sencilla. La interfaz visual es limpia y orgánica, buscando transmitir los valores de frescura, confianza y comunidad que definen al proyecto.",
     gallery: [
       {
       src: "/images/portfolio/komo/kom-01.jpg",
@@ -274,7 +264,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "cover",
     },
-    description: ".",
+    description: "Desarrollo de identidad de marca integral para 'Cicma', un centro especializado en cirugía de mano. El núcleo de la identidad es un logotipo conceptual de estilo lineal: una mano donde la palma está formada por la letra 'C', y el dedo corazón representa un láser quirúrgico, simbolizando la precisión y la tecnología avanzada del centro. El trabajo abarcó desde la identidad visual y la papelería corporativa hasta el diseño de la página web. En el entorno digital, se utilizó una mano animada como fondo para aportar una sensación de calidez, cercanía y cuidado. Además, se diseñó un conjunto de iconos personalizados para mantener la coherencia visual en todas las plataformas. El resultado es una marca que comunica profesionalidad, innovación y un enfoque centrado en el paciente.",
     link: {
       url: "/content/portfolio/watchdrop/index.html",
       name: "Ver presentación"
@@ -312,7 +302,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "corporate bus",
     },
-    description: "",
+    description: "Durante mi trayectoria de cuatro años en IVIRMA Global Education, asumí un rol de diseñador multidisciplinar, encargado de la comunicación visual de la marca a través de múltiples plataformas. Mis responsabilidades abarcaron un amplio espectro de proyectos, desde el diseño de materiales corporativos y de marketing hasta el desarrollo de soluciones digitales. En el ámbito digital, lideré el diseño y la conceptualización de páginas web, incluyendo repositorios de vídeo y plataformas de comformación, así como el desarrollo de web apps. Mi rol también tuvo un fuerte componente audiovisual, encargándome del ciclo completo de producción de vídeo: desde el montaje y la edición hasta el diseño de portadas y la creación de animaciones. Esta posición me permitió desarrollar una visión integral de la comunicación de marca, asegurando la coherencia y calidad en todos los puntos de contacto",
     gallery: [
       {
       src: "/images/portfolio/ivirma/ivi-01.gif",
@@ -388,7 +378,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "corporate bus",
     },
-    description: "",
+    description: "En mi colaboración con maseuropa, participé activamente en la fase inicial de la empresa, desempeñando un rol fundamental en la construcción de su identidad visual. Mi trabajo consistió en desarrollar las aplicaciones de la marca en sus primeros pasos, estableciendo un sistema visual coherente para todos sus puntos de contacto. Además de definir la implementación de la marca, también me encargué del diseño y la ejecución de las campañas de marketing iniciales, contribuyendo de manera directa al lanzamiento y posicionamiento de la empresa en el mercado. Fue una oportunidad para dar forma a una marca desde sus cimientos y asegurar que su comunicación visual fuera sólida y efectiva desde el primer día.",
     gallery: [
       {
       src: "/images/portfolio/maseuropa/mas-01.jpg",
@@ -444,7 +434,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 900,
       hint: "logo on corporate laser background",
     },
-    description: "",
+    description: "Diseño de un logotipo para la colección de ropa de Tamara Falcó Preysler. El objetivo principal era crear una marca que reflejara la elegancia y el estilo personal que la colección caracterizan, utilizando sus iniciales 'TFP'. El resultado es un monograma sofisticado y limpio que entrelaza las tres letras de forma equilibrada y armónica. El diseño funciona como una firma de autor, aportando un sello de distinción y calidad a las prendas de la colección. La marca logra ser atemporal y reconocible, encapsulando la esencia de un proyecto de moda personal y exclusivo",
     gallery: [
       {
       src: "/images/portfolio/tamara-falco-preysler/tfp-01.jpg",
@@ -472,7 +462,7 @@ export const portfolioData: PortfolioItem[] = [
       height: 992,
       hint: "folder mockup",
     },
-    description: "",
+    description: "'Unas Vacaciones de la Ciudad al Campo' es un proyecto de diseño editorial con un profundo significado personal. Se trata de la maquetación del libro escrito por mi padre, Jorge Stuyck del Portillo, que narra sus recuerdos de infancia. El libro nació de un proceso de superación personal, ya que fue escrito como parte de su rehabilitación con una logopeda tras sufrir un ictus. Mi labor consistió en diseñar y estructurar el libro, integrando sus textos con las ilustraciones originales creadas por él mismo. El objetivo fue crear una composición limpia y cálida que arropara la historia, respetando su sensibilidad y poniendo en valor tanto la narrativa como el arte. El resultado es un homenaje a la memoria, la resiliencia y la creatividad, un proyecto que trasciende el diseño para convertirse en un legado familiar.",
     gallery: [
       {
         src: "/images/portfolio/unas-vacaciones/una-01.jpg",
