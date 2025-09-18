@@ -563,13 +563,13 @@ export const portfolioData: PortfolioItem[] = [
         hint: "brochure mockup",
       },
       {
-      src: "/images/portfolio/nepher/nep-05.jpg",
+      src: "/images/portfolio/nepher/nep-06.jpg",
         width: 1556,
         height: 992,
         hint: "notepad mockup",
       },
       {
-      src: "/images/portfolio/nepher/nep-05.jpg",
+      src: "/images/portfolio/nepher/nep-07.jpg",
         width: 1556,
         height: 992,
         hint: "flyers mockup",
