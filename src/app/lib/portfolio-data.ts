@@ -454,6 +454,12 @@ export const portfolioData: PortfolioItem[] = [
         height: 900,
         hint: "services flyer",
       },
+      {
+      src: "/images/portfolio/tamara-falco-preysler/tfp-03.jpg",
+        width: 1600,
+        height: 900,
+        hint: "services flyer",
+      },
     ],
   },
   {
