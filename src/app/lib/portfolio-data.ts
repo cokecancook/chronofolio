@@ -27,6 +27,56 @@ export const portfolioCategories = ["Todos", "Branding", "Diseño Gráfico", "Di
 
 export const portfolioData: PortfolioItem[] = [
   {
+    id: "miau",
+    title: "Miau",
+    subtitle: "Logo, App y Presentación",
+    categories: ["Logo", "Diseño Gráfico", "Diseño App"],
+    year: "2025",
+    mainImage: {
+      src: "/images/portfolio/miau/mia-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: "'Miau' es un proyecto de aplicación y marca, conceptualizado y diseñado en el Hackathon Gandia 2025, con la misión de combatir la soledad involuntaria. La identidad es amigable y cercana: el nombre de de 'Miau' y el logotipo con la cara de un gato se completan con un sonido de maullido en las notificaciones de la interfaz. La aplicación tiene una doble función. Por un lado, es una plataforma social que anima a los usuarios a conectar con otras personas proponiendo o uniéndose a planes y actividades. Por otro lado, en un nivel más profundo, la app está diseñada para recoger datos de interacción que, mediante un sistema de IA, detectan patrones de comportamiento asociados a la soledad no deseada. Este análisis permitiría a futuro que organizaciones o servicios sociales pudieran tomar medidas preventivas, convirtiendo a 'Miau' en una herramienta innovadora que no solo fomenta la conexión social, sino que también funciona como un sistema de alerta temprana para un problema social creciente.",
+    link: {
+      url: "https://www.figma.com/deck/0rh4PS9MjbIFoFikJeMmpQ/Startup-Pitch?node-id=5-82&t=bsM1t3bC6STH3Fvc-1",
+      name: "Ver presentación"
+    },
+    gallery: [
+      {
+      src: "/images/portfolio/miau/mia-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/miau/mia-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/miau/mia-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/miau/mia-04.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/miau/mia-05.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+    ],
+  },
+  {
     id: "audio-devices",
     title: "Audio Devices",
     subtitle: "Ilustración",
@@ -94,6 +144,24 @@ export const portfolioData: PortfolioItem[] = [
       },
       {
       src: "/images/portfolio/cristina-y-pablo/cyp-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cristina-y-pablo/cyp-04.jpg",
         width: 1600,
         height: 1600,
         hint: "image slide",
