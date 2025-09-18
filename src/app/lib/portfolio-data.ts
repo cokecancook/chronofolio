@@ -341,7 +341,7 @@ export const portfolioData: PortfolioItem[] = [
         hint: "stationery mockup",
       },
       {
-      src: "/images/portfolio/ivirma/ivi-06.gif",
+      src: "/images/portfolio/ivirma/ivi-06.jpg",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
@@ -360,6 +360,12 @@ export const portfolioData: PortfolioItem[] = [
       },
       {
       src: "/images/portfolio/ivirma/ivi-09.jpg",
+        width: 1556,
+        height: 992,
+        hint: "stationery mockup",
+      },
+      {
+      src: "/images/portfolio/ivirma/ivi-10.jpg",
         width: 1556,
         height: 992,
         hint: "stationery mockup",
