@@ -57,8 +57,8 @@ export function PortfolioTimeline({ projects, categories }: PortfolioTimelinePro
 
   return (
     <section className="min-h-screen relative">
-      <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm pt-8 pb-4">
-        <div className="flex justify-center flex-wrap gap-2 mb-8">
+      <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm pt-4 pb-6">
+        <div className="flex justify-center flex-wrap gap-2">
           {categories.map((category) => (
             <Button
               key={category}
