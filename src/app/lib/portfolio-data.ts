@@ -228,7 +228,7 @@ export const portfolioData: PortfolioItem[] = [
     id: "komo",
     title: "Komo",
     subtitle: "Branding & Diseño App",
-    categories: ["Diseño Gráfico", "Branding", "Diseño Web"],
+    categories: ["Diseño Gráfico", "Branding", "Diseño App"],
     year: "2020",
     mainImage: {
       src: "/images/portfolio/komo/kom-00.jpg",
