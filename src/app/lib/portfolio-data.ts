@@ -121,6 +121,44 @@ export const portfolioData: PortfolioItem[] = [
     ],
   },
   {
+    id: "cicma",
+    title: "Cicma",
+    subtitle: "Branding & Web Design",
+    categories: ["Diseño Gráfico", "Branding", "Diseño Web"],
+    year: "2020",
+    mainImage: {
+      src: "/images/portfolio/cicma/cic-00.jpg",
+      width: 1600,
+      height: 900,
+      hint: "cover",
+    },
+    description: ".",
+    link: {
+      url: "/content/portfolio/watchdrop/index.html",
+      name: "Ver presentación"
+    },
+    gallery: [
+      {
+      src: "/images/portfolio/cicma/cic-01.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "image slide",
+      },
+      {
+      src: "/images/portfolio/cicma/cic-02.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+      {
+      src: "/images/portfolio/cicma/cic-03.jpg",
+        width: 1600,
+        height: 1600,
+        hint: "mockup slide",
+      },
+    ],
+  },
+  {
     id: "ivirma-global-education",
     title: "IVIRMA Global Education",
     subtitle: "Graphic Design",
