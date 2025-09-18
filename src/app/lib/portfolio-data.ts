@@ -1196,6 +1196,12 @@ export const portfolioData: PortfolioItem[] = [
         height: 992,
         hint: "flyer mockup",
       },
+      {
+      src: "/images/portfolio/el-metodo-havana-7/elm-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "flyer mockup",
+      },
     ],
   },
   {
