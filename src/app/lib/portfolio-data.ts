@@ -455,7 +455,7 @@ export const portfolioData: PortfolioItem[] = [
     description: "En mi colaboración con maseuropa, participé activamente en la fase inicial de la empresa, desempeñando un rol fundamental en la construcción de su identidad visual. Mi trabajo consistió en desarrollar las aplicaciones de la marca en sus primeros pasos, estableciendo un sistema visual coherente para todos sus puntos de contacto. Además de definir la implementación de la marca, también me encargué del diseño y la ejecución de las campañas de marketing iniciales, contribuyendo de manera directa al lanzamiento y posicionamiento de la empresa en el mercado. Fue una oportunidad para dar forma a una marca desde sus cimientos y asegurar que su comunicación visual fuera sólida y efectiva desde el primer día.",
     gallery: [
       {
-      src: "/images/portfolio/maseuropa/mas-01.jpg",
+      src: "/images/portfolio/maseuropa/mas-01.gif",
         width: 1556,
         height: 992,
         hint: "mascot ad screenshot",
@@ -490,6 +490,12 @@ export const portfolioData: PortfolioItem[] = [
     gallery: [
       {
       src: "/images/portfolio/beauty-luz/bea-01.jpg",
+        width: 1556,
+        height: 992,
+        hint: "services flyer",
+      },
+      {
+      src: "/images/portfolio/beauty-luz/bea-02.jpg",
         width: 1556,
         height: 992,
         hint: "services flyer",
@@ -552,6 +558,18 @@ export const portfolioData: PortfolioItem[] = [
       },
       {
         src: "/images/portfolio/unas-vacaciones/una-02.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
+      },
+      {
+        src: "/images/portfolio/unas-vacaciones/una-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
+      },
+      {
+        src: "/images/portfolio/unas-vacaciones/una-04.jpg",
         width: 1556,
         height: 992,
         hint: "coaster mockup",
