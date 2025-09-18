@@ -602,6 +602,18 @@ export const portfolioData: PortfolioItem[] = [
         height: 992,
         hint: "coaster mockup",
       },
+      {
+        src: "/images/portfolio/porsche-valencia/por-03.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
+      },
+      {
+        src: "/images/portfolio/porsche-valencia/por-04.jpg",
+        width: 1556,
+        height: 992,
+        hint: "coaster mockup",
+      },
     ],
   },
   {
