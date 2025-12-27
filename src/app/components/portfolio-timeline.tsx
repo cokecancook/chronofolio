@@ -1,142 +1,160 @@
-"use client";
+'use client';
 
-import type { PortfolioItem } from "@/app/lib/portfolio-data";
-import { useState, useMemo, useRef, useEffect } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ProjectModal } from "./project-modal";
-import { cn } from "@/lib/utils";
-import { useIsMobile } from "@/hooks/use-mobile";
+import type { PortfolioItem } from '@/app/lib/portfolio-data';
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { ProjectModal } from './project-modal';
+import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import {
+	motion,
+	AnimatePresence,
+	useScroll,
+	useSpring,
+	useTransform,
+} from 'framer-motion';
+
+import { YearGroup } from './year-group';
 
 interface PortfolioTimelineProps {
-  projects: PortfolioItem[];
-  categories: string[];
+	projects: PortfolioItem[];
+	categories: string[];
 }
 
-export function PortfolioTimeline({ projects, categories }: PortfolioTimelineProps) {
-  const [activeFilter, setActiveFilter] = useState("Todos");
-  const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
-  const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
-  
-  const isMobile = useIsMobile();
-  const timelineRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+export function PortfolioTimeline({
+	projects,
+	categories,
+}: PortfolioTimelineProps) {
+	const searchParams = useSearchParams();
+	const router = useRouter();
+	const pathname = usePathname();
 
-  const filteredProjects = useMemo(() => {
-    if (activeFilter === "Todos") {
-      return projects;
-    }
-    return projects.filter((p) => p.categories.includes(activeFilter));
-  }, [activeFilter, projects]);
-  
-  const activeCardId = hoveredCardId;
+	const activeFilter = searchParams.get('category') || 'Todos';
+	const [selectedProject, setSelectedProject] =
+		useState<PortfolioItem | null>(null);
+	const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+	const isMobile = useIsMobile();
 
-    const elements = cardRefs.current;
-    elements.forEach((el) => {
-      if (el) observer.observe(el);
-    });
+	const timelineRef = useRef<HTMLDivElement>(null);
+	const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    return () => {
-      elements.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, [filteredProjects]);
+	const filteredProjects = useMemo(() => {
+		if (activeFilter === 'Todos') {
+			return projects;
+		}
+		return projects.filter((p) => p.categories.includes(activeFilter));
+	}, [activeFilter, projects]);
 
-  return (
-    <section className="min-h-screen relative">
-      <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm pt-4 pb-6">
-        <div className="flex justify-center flex-wrap gap-2">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={activeFilter === category ? "default" : "outline"}
-              onClick={() => setActiveFilter(category)}
-              className="rounded-full"
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
-      </div>
+	const { scrollYProgress } = useScroll({
+		target: timelineRef,
+		offset: ['start 30%', 'end center'],
+	});
 
-      <div 
-        ref={timelineRef} 
-        className="relative w-full max-w-4xl mx-auto mt-8"
-        onMouseLeave={() => setHoveredCardId(null)}
-      >
-        <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
+	const heightPercent = useSpring(
+		useTransform(scrollYProgress, [0, 1], [100, 0]),
+		{
+			stiffness: 100,
+			damping: 30,
+			restDelta: 0.001,
+		}
+	);
 
-        {filteredProjects.map((project, index) => {
-          const isActive = project.id === activeCardId;
+	const height = useTransform(heightPercent, (v) => `${v}%`);
 
-          return (
-            <div
-              key={project.id}
-              ref={(el) => (cardRefs.current[index] = el)}
-              data-project-id={project.id}
-              className={cn(
-                "portfolio-card relative mb-12 md:mb-24",
-                "md:w-1/2",
-                index % 2 === 0 ? "md:pr-8 md:mr-auto" : "md:pl-8 md:ml-auto"
-              )}
-              onMouseEnter={() => !isMobile && setHoveredCardId(project.id)}
-            >
-              <div className="absolute top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-2"
-                style={{
-                  right: index % 2 === 0 ? "0" : "auto",
-                  left: index % 2 === 0 ? "auto" : "0",
-                  transform: `translateX(${index % 2 === 0 ? "50%" : "-50%"})`
-                }}>
-                <span className="text-xs font-headline tracking-tighter whitespace-nowrap">{project.year}</span>
-                <div
-                  className={cn(
-                      "w-4 h-4 rounded-full bg-background border-2 border-primary",
-                      isActive && "bg-primary"
-                  )}
-                  style={{transition: 'transform 0.1s, background-color 0.1s'}}
-                ></div>
-              </div>
-              
-              <div className="relative cursor-pointer" onClick={() => setSelectedProject(project)}>
-                <div className={cn("relative overflow-hidden shadow-2xl")}>
-                  <Image
-                    src={project.mainImage.src}
-                    width={project.mainImage.width}
-                    height={project.mainImage.height}
-                    alt={project.title}
-                    data-ai-hint={project.mainImage.hint}
-                    className="w-full h-auto"
-                  />
-                  <div 
-                    className={cn(
-                      "absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center p-4",
-                      !isActive && "hidden"
-                    )}
-                  >
-                    <h3 className="text-2xl font-headline tracking-tighter font-bold text-white">{project.title}</h3>
-                    <p className="text-lg text-gray-200">{project.subtitle}</p>
-                    <p className="text-lg text-gray-200 mt-2">{project.year}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
-    </section>
-  );
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		const elements = cardRefs.current;
+		elements.forEach((el) => {
+			if (el) observer.observe(el);
+		});
+
+		return () => {
+			elements.forEach((el) => {
+				if (el) observer.unobserve(el);
+			});
+		};
+	}, [filteredProjects]);
+
+	const groupedProjects = useMemo(() => {
+		const groups: {
+			year: string;
+			projects: PortfolioItem[];
+		}[] = [];
+		filteredProjects.forEach((project) => {
+			const lastGroup = groups[groups.length - 1];
+			if (lastGroup && lastGroup.year === project.year) {
+				lastGroup.projects.push(project);
+			} else {
+				groups.push({
+					year: project.year,
+					projects: [project],
+				});
+			}
+		});
+		return groups;
+	}, [filteredProjects]);
+
+	return (
+		<section
+			className={cn('min-h-screen relative px-4', !isMobile && 'md:px-0')}
+		>
+			<div
+				ref={timelineRef}
+				className="relative w-full max-w-5xl xl:max-w-[1200px] 2xl:max-w-[1600px] mx-auto"
+				onMouseLeave={() => setHoveredCardId(null)}
+			>
+				<div
+					className="absolute left-1/2 top-0 h-full w-px bg-border/20 -translate-x-1/2 hidden desktop:block"
+					aria-hidden="true"
+				/>
+				<motion.div
+					style={{ height }}
+					className="absolute left-1/2 -ml-[1px] bottom-0 w-[2px] bg-primary -translate-x-1/2 will-change-transform hidden desktop:block min-h-[264px]"
+					aria-hidden="true"
+				/>
+
+				{(() => {
+					let globalIndex = 0;
+					return groupedProjects.map((group, groupIndex) => {
+						const isLastYearGroup =
+							groupIndex === groupedProjects.length - 1;
+						const startIndex = globalIndex;
+						globalIndex += group.projects.length;
+
+						return (
+							<YearGroup
+								key={group.year}
+								year={group.year}
+								projects={group.projects}
+								globalStartIndex={startIndex}
+								isMobile={isMobile}
+								isLastYearGroup={isLastYearGroup}
+								activeCardId={hoveredCardId}
+								cardRefs={cardRefs}
+								onProjectClick={setSelectedProject}
+								onMouseEnter={setHoveredCardId}
+								onMouseLeave={() => setHoveredCardId(null)}
+							/>
+						);
+					});
+				})()}
+			</div>
+
+			<ProjectModal
+				project={selectedProject}
+				onClose={() => setSelectedProject(null)}
+			/>
+		</section>
+	);
 }
