@@ -9,10 +9,14 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        desktop: '1200px',
+      },
       fontFamily: {
         body: ['Victor Mono', 'monospace'],
         headline: ['Sixtyfour', 'system-ui'],
         code: ['Victor Mono', 'monospace'],
+        tourney: ['var(--font-tourney)', 'system-ui'],
       },
       colors: {
         background: 'hsl(var(--background))',
