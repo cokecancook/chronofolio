@@ -180,10 +180,10 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 								!isActive && 'opacity-0'
 							)}
 						>
-							<h3 className="text-2xl md:text-3xl font-headline tracking-tighter font-bold text-white mb-2">
+							<h3 className="text-2xl md:text-3xl font-tourney font-black uppercase text-white">
 								{project.title}
 							</h3>
-							<p className="text-lg text-gray-200">
+							<p className="text-md text-white/80">
 								{project.subtitle}
 							</p>
 						</div>
