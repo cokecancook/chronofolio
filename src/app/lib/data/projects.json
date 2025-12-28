@@ -55,7 +55,7 @@
   },
   {
     "id": "audio-devices",
-    "title": "Audio Devices",
+    "title": "AMPS",
     "subtitle": "Ilustración",
     "categories": [
       "Ilustración"
@@ -103,7 +103,7 @@
   },
   {
     "id": "cristina-y-pablo",
-    "title": "Cristina & Pablo",
+    "title": "C & P",
     "subtitle": "Diseño Gráfico",
     "categories": [
       "Diseño Gráfico"
@@ -330,10 +330,6 @@
       "hint": "cover"
     },
     "description": "Desarrollo de identidad de marca integral para 'Cicma', un centro especializado en cirugía de mano. El núcleo de la identidad es un logotipo conceptual de estilo lineal: una mano donde la palma está formada por la letra 'C', y el dedo corazón representa un láser quirúrgico, simbolizando la precisión y la tecnología avanzada del centro. El trabajo abarcó desde la identidad visual y la papelería corporativa hasta el diseño de la página web. En el entorno digital, se utilizó una mano animada como fondo para aportar una sensación de calidez, cercanía y cuidado. Además, se diseñó un conjunto de iconos personalizados para mantener la coherencia visual en todas las plataformas. El resultado es una marca que comunica profesionalidad, innovación y un enfoque centrado en el paciente.",
-    "link": {
-      "url": "/content/portfolio/watchdrop/index.html",
-      "name": "Ver presentación"
-    },
     "gallery": [
       {
         "src": "/images/portfolio/cicma/cic-01.jpg",
@@ -357,7 +353,7 @@
   },
   {
     "id": "ivirma-global-education",
-    "title": "IVIRMA Global Education",
+    "title": "IVIRMA",
     "subtitle": "Diseño Gráfico",
     "categories": [
       "Diseño Gráfico",
@@ -509,7 +505,7 @@
   },
   {
     "id": "tamara-falco-preysler",
-    "title": "Tamara Falcó Preysler",
+    "title": "Tamara Falcó",
     "subtitle": "Logo",
     "categories": [
       "Logo"
@@ -545,7 +541,7 @@
   },
   {
     "id": "unas-vacaciones",
-    "title": "Unas Vacaciones de la Ciudad al Campo",
+    "title": "Unas Vacaciones",
     "subtitle": "Editorial",
     "categories": [
       "Editorial"
@@ -587,7 +583,7 @@
   },
   {
     "id": "centro-porsche-valencia",
-    "title": "Centro Porsche Valencia",
+    "title": "Porsche Valencia",
     "subtitle": "Diseño Gráfico",
     "categories": [
       "Diseño Gráfico"
@@ -769,7 +765,7 @@
   },
   {
     "id": "ruiz-de-la-prada-arquitectos",
-    "title": "Ruiz de la Prada Arquitectos",
+    "title": "Ruiz de la Prada",
     "subtitle": "Branding",
     "categories": [
       "Logo",
@@ -934,7 +930,7 @@
   },
   {
     "id": "atria-jobs",
-    "title": "Atria Jobs",
+    "title": "Atria",
     "subtitle": "Branding & UI/UX",
     "categories": [
       "Logo",
@@ -1002,7 +998,7 @@
   },
   {
     "id": "xv-valencia-fashion-week",
-    "title": "XV Valencia Fashion Week",
+    "title": "VFW",
     "subtitle": "Branding",
     "categories": [
       "Logo",
@@ -1057,7 +1053,7 @@
   },
   {
     "id": "moddos",
-    "title": "Moddos Club",
+    "title": "Moddos",
     "subtitle": "Diseño Gráfico",
     "categories": [
       "Diseño Gráfico",
@@ -1106,7 +1102,7 @@
   },
   {
     "id": "imz",
-    "title": "Instituto Médico Zahrawi",
+    "title": "IMZ",
     "subtitle": "Branding",
     "categories": [
       "Logo",
@@ -1337,7 +1333,7 @@
   },
   {
     "id": "el-metodo-havana-7",
-    "title": "El Método Havana 7",
+    "title": "Havana Club",
     "subtitle": "Campaña Publicitaria",
     "categories": [
       "Logo",
@@ -1374,8 +1370,8 @@
   },
   {
     "id": "granja-vectorial",
-    "title": "Granja Vectorial",
-    "subtitle": "Ilustraciones Digitales",
+    "title": "Vector Farm",
+    "subtitle": "Ilustración",
     "categories": [
       "Ilustración"
     ],
