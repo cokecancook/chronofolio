@@ -32,18 +32,31 @@ export function MainHeader({ categories }: MainHeaderProps) {
 
 	useMotionValueEvent(scrollY, 'change', (latest) => {
 		const previous = scrollY.getPrevious() ?? 0;
+		const delta = latest - previous;
 
-		if (latest > previous && latest > 150) {
-			// Scrolling down - hide immediately
+		// Scrolling down
+		if (delta > 0 && latest > 150) {
+			// Clear any pending timers
 			if (scrollUpTimerRef.current) {
 				clearTimeout(scrollUpTimerRef.current);
 				scrollUpTimerRef.current = null;
 			}
 			scrollStartRef.current = null;
+
+			// Hide header immediately
 			setIsVisible(false);
-			setIsScrolled(false);
-		} else if (latest < previous && latest > 50) {
-			// Scrolling up - wait for delay and check distance
+
+			// Delay background removal until after slide animation (400ms)
+			setTimeout(() => {
+				// Only remove background if still scrolled and still hidden
+				if (scrollY.get() > 150 && !isVisible) {
+					setIsScrolled(false);
+				}
+			}, 400);
+		}
+		// Scrolling up
+		else if (delta < 0 && latest > 50) {
+			// Track scroll start position for distance calculation
 			if (scrollStartRef.current === null) {
 				scrollStartRef.current = latest;
 			}
@@ -53,18 +66,20 @@ export function MainHeader({ categories }: MainHeaderProps) {
 				clearTimeout(scrollUpTimerRef.current);
 			}
 
-			// Set new timer to reveal header after delay
+			// Debounce: wait for continuous upward scroll
 			scrollUpTimerRef.current = setTimeout(() => {
 				const scrolledUp = (scrollStartRef.current ?? latest) - latest;
-				if (scrolledUp >= 50) {
-					setIsVisible(true);
-					setIsScrolled(true);
+				// Require at least 30px of upward scroll
+				if (scrolledUp >= 30) {
+					setIsScrolled(true); // Show background first
+					setIsVisible(true); // Then reveal header
+					scrollStartRef.current = null;
 				}
-			}, 150);
+			}, 100);
 		}
 
-		// Reset at the very top (no background)
-		if (latest <= 0) {
+		// At the very top - reset everything
+		if (latest <= 10) {
 			if (scrollUpTimerRef.current) {
 				clearTimeout(scrollUpTimerRef.current);
 				scrollUpTimerRef.current = null;
@@ -139,7 +154,7 @@ export function MainHeader({ categories }: MainHeaderProps) {
 				className={cn(
 					'fixed top-0 left-0 right-0 z-[101] w-full transition-all duration-300',
 					isScrolled && isVisible
-						? 'bg-background/10 backdrop-blur-sm shadow-sm'
+						? 'bg-background/90 backdrop-blur-sm shadow-sm'
 						: 'bg-transparent'
 				)}
 			>
