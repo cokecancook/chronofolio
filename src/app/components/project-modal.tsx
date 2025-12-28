@@ -33,10 +33,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 			open={!!project}
 			onOpenChange={(isOpen) => !isOpen && onClose()}
 		>
-			<DialogContent className="max-w-[95vw] h-[95svh] overflow-y-auto p-0 pb-3">
-				<div className="p-6">
+			<DialogContent className="max-w-[95vw] h-[95svh] p-0 flex flex-col">
+				<div className="h-32 px-6 pt-6 pb-4 shrink-0">
 					<DialogHeader>
-						<DialogTitle className="text-3xl font-bold font-headline">
+						<DialogTitle className="text-5xl font-black uppercase font-tourney">
 							{project.title}
 						</DialogTitle>
 						<div className="flex items-center gap-4 pt-2">
@@ -44,35 +44,44 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 								{project.categories.map((category, index) => (
 									<Badge
 										key={index}
-										className="text-md border-black"
+										className="text-xs border-black"
 										variant="secondary"
 									>
 										{category}
 									</Badge>
 								))}
 							</div>
-							<span className="text-sm font-headline tracking-tighter mt-1">
+							<span className="text-xs font-headline tracking-tighter mt-1">
 								{project.year}
 							</span>
 						</div>
 					</DialogHeader>
 				</div>
-				<div className="flex flex-col gap-8 px-6 pb-6">
-					<Carousel className="w-full">
-						<CarouselContent>
+				<div className="flex flex-col gap-8 px-6 pb-6 overflow-y-auto flex-1">
+					<Carousel
+						className="w-full max-h-[640px]"
+						opts={{
+							align: 'start',
+							containScroll: 'trimSnaps',
+						}}
+					>
+						<CarouselContent className="-ml-2 md:-ml-4">
 							{[project.mainImage, ...project.gallery].map(
 								(image, index) => (
-									<CarouselItem key={index}>
-										<div className="aspect-video relative overflow-hidden">
+									<CarouselItem
+										key={index}
+										className="pl-2 md:pl-4 basis-[50%] md:basis-[45%]"
+									>
+										<div className="h-[640px] w-full relative overflow-hidden rounded-lg">
 											<Image
 												src={image.src}
 												alt={`${
 													project.title
 												} - image ${index + 1}`}
 												fill
-												className="object-cover"
+												className="object-contain"
 												data-ai-hint={image.hint}
-												sizes="100vw"
+												sizes="90vw"
 											/>
 										</div>
 									</CarouselItem>
