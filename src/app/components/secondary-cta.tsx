@@ -1,7 +1,7 @@
 export function SecondaryCta() {
 	return (
 		<section className="text-center py-24 px-4 border-t border-border/40">
-			<h2 className="text-53xl md:text-6xl max-w-2xl mx-auto xl:max-w-3xl font-black font-tourney tracking-tighter mb-4">
+			<h2 className="text-5xl md:text-6xl max-w-2xl mx-auto xl:max-w-3xl font-black font-tourney tracking-tighter mb-4">
 				¿Hablamos?
 			</h2>
 			<p className="text-muted-foreground max-w-[260px] mx-auto mb-8">
