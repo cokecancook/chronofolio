@@ -166,7 +166,10 @@ export function MainHeader({ categories }: MainHeaderProps) {
 			</motion.div>
 
 			{/* Filters - always sticky, positioned below header when visible */}
-			<div
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.5, delay: 0.3 }}
 				className="sticky z-[100] w-full"
 				style={{
 					top: isVisible ? `${heroHeight}px` : '0px',
@@ -183,7 +186,7 @@ export function MainHeader({ categories }: MainHeaderProps) {
 						setFiltersExpanded={setFiltersExpanded}
 					/>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* Spacer to prevent content jump */}
 			<div style={{ height: `${heroHeight}px` }} />

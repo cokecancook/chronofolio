@@ -106,7 +106,10 @@ export function PortfolioTimeline({
 	}, [filteredProjects]);
 
 	return (
-		<section
+		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5, delay: 0.4 }}
 			className={cn('min-h-screen relative px-4', !isMobile && 'md:px-0')}
 		>
 			<div
@@ -155,6 +158,6 @@ export function PortfolioTimeline({
 				project={selectedProject}
 				onClose={() => setSelectedProject(null)}
 			/>
-		</section>
+		</motion.section>
 	);
 }
