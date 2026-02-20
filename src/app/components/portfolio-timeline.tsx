@@ -5,33 +5,31 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { ProjectModal } from './project-modal';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import {
-	motion,
-	AnimatePresence,
-	useScroll,
-	useSpring,
-	useTransform,
-} from 'framer-motion';
+import { useSearchParams } from 'next/navigation';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 import { YearGroup } from './year-group';
 
 interface PortfolioTimelineProps {
 	projects: PortfolioItem[];
 	categories: string[];
+	initialProjectId?: string;
 }
 
 export function PortfolioTimeline({
 	projects,
 	categories,
+	initialProjectId,
 }: PortfolioTimelineProps) {
 	const searchParams = useSearchParams();
-	const router = useRouter();
-	const pathname = usePathname();
 
 	const activeFilter = searchParams.get('category') || 'Todos';
 	const [selectedProject, setSelectedProject] =
-		useState<PortfolioItem | null>(null);
+		useState<PortfolioItem | null>(() =>
+			initialProjectId
+				? projects.find((p) => p.id === initialProjectId) ?? null
+				: null,
+		);
 	const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
 
 	const isMobile = useIsMobile();
@@ -57,7 +55,7 @@ export function PortfolioTimeline({
 			stiffness: 100,
 			damping: 30,
 			restDelta: 0.001,
-		}
+		},
 	);
 
 	const height = useTransform(heightPercent, (v) => `${v}%`);
@@ -71,7 +69,7 @@ export function PortfolioTimeline({
 					}
 				});
 			},
-			{ threshold: 0.1 }
+			{ threshold: 0.1 },
 		);
 
 		const elements = cardRefs.current;
@@ -104,6 +102,16 @@ export function PortfolioTimeline({
 		});
 		return groups;
 	}, [filteredProjects]);
+
+	const handleProjectOpen = (project: PortfolioItem) => {
+		setSelectedProject(project);
+		window.history.pushState(null, '', `/${project.id}`);
+	};
+
+	const handleProjectClose = () => {
+		setSelectedProject(null);
+		window.history.pushState(null, '', '/');
+	};
 
 	return (
 		<motion.section
@@ -145,7 +153,7 @@ export function PortfolioTimeline({
 								isLastYearGroup={isLastYearGroup}
 								activeCardId={hoveredCardId}
 								cardRefs={cardRefs}
-								onProjectClick={setSelectedProject}
+								onProjectClick={handleProjectOpen}
 								onMouseEnter={setHoveredCardId}
 								onMouseLeave={() => setHoveredCardId(null)}
 							/>
@@ -156,7 +164,7 @@ export function PortfolioTimeline({
 
 			<ProjectModal
 				project={selectedProject}
-				onClose={() => setSelectedProject(null)}
+				onClose={handleProjectClose}
 			/>
 		</motion.section>
 	);

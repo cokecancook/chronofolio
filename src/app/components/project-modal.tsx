@@ -17,6 +17,8 @@ import {
 } from '@/components/ui/carousel';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { useState, useRef } from 'react';
+import { Link, Check } from 'lucide-react';
 
 interface ProjectModalProps {
 	project: PortfolioItem | null;
@@ -24,6 +26,42 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+	const [copied, setCopied] = useState(false);
+	const dialogRef = useRef<HTMLDivElement>(null);
+
+	const handleCopyLink = () => {
+		if (!project) return;
+		const url = `${window.location.origin}/${project.id}`;
+		const confirm = () => {
+			setCopied(true);
+			setTimeout(() => setCopied(false), 2000);
+		};
+		const execFallback = () => {
+			try {
+				const ta = document.createElement('textarea');
+				ta.value = url;
+				ta.style.cssText =
+					'position:fixed;top:0;left:0;width:2em;height:2em;padding:0;border:none;outline:none;background:transparent;font-size:16px;';
+				// Append inside the dialog so it's within the focus trap
+				const container = dialogRef.current ?? document.body;
+				container.appendChild(ta);
+				ta.focus();
+				ta.select();
+				ta.setSelectionRange(0, 99999);
+				document.execCommand('copy');
+				container.removeChild(ta);
+			} catch {}
+			confirm();
+		};
+		if (navigator?.clipboard?.writeText) {
+			navigator.clipboard
+				.writeText(url)
+				.then(confirm)
+				.catch(execFallback);
+		} else {
+			execFallback();
+		}
+	};
 	if (!project) {
 		return null;
 	}
@@ -33,7 +71,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 			open={!!project}
 			onOpenChange={(isOpen) => !isOpen && onClose()}
 		>
-			<DialogContent className="max-w-[95vw] h-[95svh] p-0 gap-0 flex flex-col">
+			<DialogContent
+				ref={dialogRef}
+				className="max-w-[95vw] h-[95svh] p-0 gap-0 flex flex-col"
+				onOpenAutoFocus={(e) => e.preventDefault()}
+			>
 				<div className="h-32 px-6 pt-6 shrink-0 border-b-[1px] border-black">
 					<DialogHeader>
 						<DialogTitle className="text-5xl font-black uppercase font-tourney">
@@ -54,6 +96,23 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 							<span className="text-xs font-headline tracking-tighter mt-1">
 								{project.year}
 							</span>
+							<button
+								onClick={handleCopyLink}
+								title="Copy link"
+								className="ml-auto flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+							>
+								{copied ? (
+									<>
+										<Check className="w-3.5 h-3.5" /> URL
+										Copiada!
+									</>
+								) : (
+									<>
+										<Link className="w-3.5 h-3.5" />{' '}
+										Compartir
+									</>
+								)}
+							</button>
 						</div>
 					</DialogHeader>
 				</div>
