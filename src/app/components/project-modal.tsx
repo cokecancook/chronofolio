@@ -33,7 +33,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 			open={!!project}
 			onOpenChange={(isOpen) => !isOpen && onClose()}
 		>
-			<DialogContent className="max-w-[95vw] h-[95svh] p-0 flex flex-col">
+			<DialogContent className="max-w-[95vw] h-[95svh] p-0 gap-0 flex flex-col">
 				<div className="h-32 px-6 pt-6 shrink-0 border-b-[1px] border-black">
 					<DialogHeader>
 						<DialogTitle className="text-5xl font-black uppercase font-tourney">
@@ -74,17 +74,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 											key={index}
 											className="pl-4 basis-[80%]"
 										>
-											<div
-												className="relative w-full aspect-video overflow-hidden rounded-lg shadow-xl border-[1px] border-black/80"
-												style={{ maxHeight: '600px' }}
-											>
+											<div className="relative w-full h-[500px] overflow-hidden rounded-lg shadow-xl border-[1px] border-black/80">
 												<Image
 													src={image.src}
 													alt={`${
 														project.title
 													} - image ${index + 1}`}
 													fill
-													className="object-contain"
+													className="object-cover"
 													data-ai-hint={image.hint}
 													sizes="80vw"
 												/>
@@ -99,22 +96,27 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 					</div>
 
 					{/* Mobile: vertical 1-col grid */}
-					<div className="flex flex-col gap-4 md:hidden">
+					<div className="flex flex-col gap-4 pt-6 md:hidden">
 						{[project.mainImage, ...project.gallery].map(
 							(image, index) => (
 								<div
 									key={index}
-									className="w-full aspect-video relative overflow-hidden rounded-lg shadow-xl"
+									className="w-full overflow-hidden rounded-lg shadow-xl border-[1px] border-black/80"
 								>
 									<Image
 										src={image.src}
 										alt={`${project.title} - image ${
 											index + 1
 										}`}
-										fill
-										className="object-contain"
+										width={1920}
+										height={1080}
 										data-ai-hint={image.hint}
 										sizes="95vw"
+										style={{
+											width: '100%',
+											height: 'auto',
+											objectFit: 'contain',
+										}}
 									/>
 								</div>
 							),

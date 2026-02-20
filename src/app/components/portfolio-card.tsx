@@ -34,7 +34,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 			onMouseEnter,
 			onMouseLeave,
 		},
-		ref
+		ref,
 	) => {
 		const targetRef = useRef<HTMLDivElement>(null);
 		const [isLoaded, setIsLoaded] = useState(false);
@@ -51,17 +51,17 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 		const scale = useTransform(
 			scrollYProgress,
 			[0, 0.25],
-			isFirst ? [1, 1] : [0.85, 1]
+			isFirst ? [1, 1] : [0.85, 1],
 		);
 		const opacity = useTransform(
 			scrollYProgress,
 			[0, 0.2],
-			isFirst ? [1, 1] : [0, 1]
+			isFirst ? [1, 1] : [0, 1],
 		);
 		const y = useTransform(
 			scrollYProgress,
 			[0, 0.25],
-			isFirst ? [0, 0] : [5, 0]
+			isFirst ? [0, 0] : [5, 0],
 		);
 
 		// Slide from sides only on entry
@@ -70,7 +70,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 		const x = useTransform(
 			scrollYProgress,
 			[0, 0.15],
-			isFirst ? [0, 0] : [xValue, 0]
+			isFirst ? [0, 0] : [xValue, 0],
 		);
 
 		// Rotation only on entry
@@ -79,7 +79,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 		const rotate = useTransform(
 			scrollYProgress,
 			[0, 0.15],
-			isFirst ? [0, 0] : [rotateValue, 0]
+			isFirst ? [0, 0] : [rotateValue, 0],
 		);
 
 		return (
@@ -97,7 +97,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 					isMobile && !isLastYear && 'sticky',
 					index % 2 === 0
 						? 'desktop:pr-12 desktop:mr-auto'
-						: 'desktop:pl-12 desktop:ml-auto'
+						: 'desktop:pl-12 desktop:ml-auto',
 				)}
 				style={
 					isMobile && !isLastYear
@@ -125,7 +125,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 						<div
 							className={cn(
 								'w-4 h-4 rounded-full bg-background border-2 border-primary transition-colors duration-300 relative z-10',
-								isActive && 'bg-primary'
+								isActive && 'bg-primary',
 							)}
 						>
 							{isActive && (
@@ -154,7 +154,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 				>
 					<div
 						className={cn(
-							'relative overflow-hidden shadow-2xl rounded-lg transition-transform duration-500 bg-muted'
+							'relative overflow-hidden shadow-2xl rounded-lg transition-transform duration-500 bg-muted border-[1px] border-black/80',
 						)}
 					>
 						{!isLoaded && (
@@ -171,13 +171,13 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 								'w-full h-auto transition-all duration-700',
 								!isLoaded
 									? 'opacity-0 invisible'
-									: 'opacity-100 visible'
+									: 'opacity-100 visible',
 							)}
 						/>
 						<div
 							className={cn(
 								'absolute inset-0 bg-black/70 backdrop-blur-[2px] flex flex-col justify-center items-center text-center p-6 transition-opacity duration-300',
-								!isActive && 'opacity-0'
+								!isActive && 'opacity-0',
 							)}
 						>
 							<h3 className="text-2xl md:text-3xl font-tourney font-black uppercase text-white">
@@ -191,7 +191,7 @@ export const PortfolioCard = forwardRef<HTMLDivElement, PortfolioCardProps>(
 				</motion.div>
 			</div>
 		);
-	}
+	},
 );
 
 PortfolioCard.displayName = 'PortfolioCard';
