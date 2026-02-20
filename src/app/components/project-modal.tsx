@@ -34,7 +34,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 			onOpenChange={(isOpen) => !isOpen && onClose()}
 		>
 			<DialogContent className="max-w-[95vw] h-[95svh] p-0 flex flex-col">
-				<div className="h-32 px-6 pt-6 pb-4 shrink-0">
+				<div className="h-32 px-6 pt-6 shrink-0 border-b-[1px] border-black">
 					<DialogHeader>
 						<DialogTitle className="text-5xl font-black uppercase font-tourney">
 							{project.title}
@@ -58,39 +58,68 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 					</DialogHeader>
 				</div>
 				<div className="flex flex-col gap-8 px-6 pb-6 overflow-y-auto flex-1">
-					<Carousel
-						className="w-full max-h-[640px]"
-						opts={{
-							align: 'start',
-							containScroll: 'trimSnaps',
-						}}
-					>
-						<CarouselContent className="-ml-2 md:-ml-4">
-							{[project.mainImage, ...project.gallery].map(
-								(image, index) => (
-									<CarouselItem
-										key={index}
-										className="pl-2 md:pl-4 basis-[50%] md:basis-[45%]"
-									>
-										<div className="h-[640px] w-full relative overflow-hidden rounded-lg">
-											<Image
-												src={image.src}
-												alt={`${
-													project.title
-												} - image ${index + 1}`}
-												fill
-												className="object-contain"
-												data-ai-hint={image.hint}
-												sizes="90vw"
-											/>
-										</div>
-									</CarouselItem>
-								)
-							)}
-						</CarouselContent>
-						<CarouselPrevious className="left-2 border-none" />
-						<CarouselNext className="right-2 border-none" />
-					</Carousel>
+					{/* Desktop: Carousel */}
+					<div className="hidden md:block w-full">
+						<Carousel
+							className="w-full"
+							opts={{
+								align: 'start',
+								containScroll: 'trimSnaps',
+							}}
+						>
+							<CarouselContent className="-ml-4">
+								{[project.mainImage, ...project.gallery].map(
+									(image, index) => (
+										<CarouselItem
+											key={index}
+											className="pl-4 basis-[80%]"
+										>
+											<div
+												className="relative w-full aspect-video overflow-hidden rounded-lg shadow-xl border-[1px] border-black/80"
+												style={{ maxHeight: '600px' }}
+											>
+												<Image
+													src={image.src}
+													alt={`${
+														project.title
+													} - image ${index + 1}`}
+													fill
+													className="object-contain"
+													data-ai-hint={image.hint}
+													sizes="80vw"
+												/>
+											</div>
+										</CarouselItem>
+									),
+								)}
+							</CarouselContent>
+							<CarouselPrevious className="left-2 border-none" />
+							<CarouselNext className="right-2 border-none" />
+						</Carousel>
+					</div>
+
+					{/* Mobile: vertical 1-col grid */}
+					<div className="flex flex-col gap-4 md:hidden">
+						{[project.mainImage, ...project.gallery].map(
+							(image, index) => (
+								<div
+									key={index}
+									className="w-full aspect-video relative overflow-hidden rounded-lg shadow-xl"
+								>
+									<Image
+										src={image.src}
+										alt={`${project.title} - image ${
+											index + 1
+										}`}
+										fill
+										className="object-contain"
+										data-ai-hint={image.hint}
+										sizes="95vw"
+									/>
+								</div>
+							),
+						)}
+					</div>
 					<DialogDescription className="text-base leading-relaxed text-foreground/80 max-w-3xl">
 						{project.description}
 					</DialogDescription>
